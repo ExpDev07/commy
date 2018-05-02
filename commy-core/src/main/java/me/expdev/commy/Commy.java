@@ -1,5 +1,9 @@
 package me.expdev.commy;
 
+import me.expdev.commy.handler.MessageHandler;
+import me.expdev.commy.provider.MessagingProvider;
+import me.expdev.commy.provider.SenderProvider;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,11 +12,11 @@ import java.util.Map;
  *
  * @param <P> Type of reciever that we will send messages to
  */
-public abstract class Commy<P> implements SenderProvider<P> {
+public abstract class Commy<P> implements MessagingProvider {
 
     public static final String CHANNEL_ID = "Commy";
 
-    private static MessageHandler defaultHandler = null;
+    private MessageHandler defaultHandler = null;
     private Map<String, MessageHandler> handlers = new HashMap<String, MessageHandler>();
 
     /**
@@ -28,8 +32,8 @@ public abstract class Commy<P> implements SenderProvider<P> {
      *
      * @param handler Handler
      */
-    public static void setDefaultHandler(MessageHandler handler) {
-        defaultHandler = handler;
+    public void setDefaultHandler(MessageHandler handler) {
+        this.defaultHandler = handler;
     }
 
     /**
@@ -48,16 +52,16 @@ public abstract class Commy<P> implements SenderProvider<P> {
      * @param tag Routing tag/id of message
      * @param message Message to handle
      */
-    protected void handleMessage(String tag, String message) {
+    protected void handleMessage(Connection sender, String tag, String message) {
         // Attempt to route to appropriate handler
         MessageHandler handler = handlers.get(tag);
         if (handler == null) {
             // Have message handled by default handler if set
-            if (defaultHandler != null) defaultHandler.handle(tag, message);
+            if (defaultHandler != null) defaultHandler.handle(sender, tag, message);
             return;
         }
         // Handle message appropriately
-        handler.handle(tag, message);
+        handler.handle(sender, tag, message);
     }
 
     /**

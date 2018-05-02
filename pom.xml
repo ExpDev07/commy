@@ -12,6 +12,7 @@
         <module>commy-core</module>
         <module>commy-bungee</module>
         <module>commy-spigot</module>
+        <module>spigot-plugin</module>
     </modules>
 
     <build>

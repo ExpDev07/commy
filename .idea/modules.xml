@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/commy-bungee/commy-bungee.iml" filepath="$PROJECT_DIR$/commy-bungee/commy-bungee.iml" />
       <module fileurl="file://$PROJECT_DIR$/commy-core/commy-core.iml" filepath="$PROJECT_DIR$/commy-core/commy-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/commy-spigot/commy-spigot.iml" filepath="$PROJECT_DIR$/commy-spigot/commy-spigot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spigot-plugin/spigot-plugin.iml" filepath="$PROJECT_DIR$/spigot-plugin/spigot-plugin.iml" />
     </modules>
   </component>
 </project>

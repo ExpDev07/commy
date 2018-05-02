@@ -12,6 +12,7 @@
         <module name="commy-spigot" />
         <module name="core" />
         <module name="spigot" />
+        <module name="spigot-plugin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="commy-spigot" target="1.8" />
       <module name="core" target="1.8" />
       <module name="spigot" target="1.8" />
+      <module name="spigot-plugin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
