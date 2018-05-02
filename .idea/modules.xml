@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/commy.iml" filepath="$PROJECT_DIR$/commy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commy-bungee/commy-bungee.iml" filepath="$PROJECT_DIR$/commy-bungee/commy-bungee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commy-core/commy-core.iml" filepath="$PROJECT_DIR$/commy-core/commy-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commy-spigot/commy-spigot.iml" filepath="$PROJECT_DIR$/commy-spigot/commy-spigot.iml" />
+    </modules>
+  </component>
+</project>
