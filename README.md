@@ -66,7 +66,8 @@ public class SpigotPlugin extends JavaPlugin {
             // We know tag == test, otherwise it would have been intercepted through the default handler
             LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
 
-            // Respond!
+            // Respond! Here, the source we're communicating with will need to have a handler for the "test" pipe, otherwise
+            // it will be rerouted to their default handler
             conn.sendMessage("test", "I heard your test message and is sending this back through the \"test\" pipe");
         }
     }
