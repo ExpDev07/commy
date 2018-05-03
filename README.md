@@ -134,6 +134,8 @@ public class SpigotPlugin extends JavaPlugin {
 }
 ```
 
+Find more examples [for SpigotMC](spigot-plugin) and [for BungeeCord](bungeecord-plugin).
+
 ## Deployment
 
 Once you have shaded commy, all you have to do is put your plugin inside your _/plugins_ folder as regular.
