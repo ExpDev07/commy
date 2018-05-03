@@ -134,7 +134,7 @@ public class SpigotPlugin extends JavaPlugin {
 }
 ```
 
-Find more examples [for SpigotMC](spigot-plugin) and [for BungeeCord](bungeecord-plugin).
+Find more examples [for SpigotMC](spigot-plugin) and [for BungeeCord](bungee-plugin).
 
 ## Deployment
 
