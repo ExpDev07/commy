@@ -16,7 +16,9 @@ Maven
 
 ## Examples
 
-You will find some examples below on how to use **Commy** with Spigot and BungeeCord.
+You will find some examples below on how to use **Commy** with Spigot and BungeeCord. 
+
+_Please note that both commy-spigot and commy-bungee uses the same base-interface, which means that setting it up will be the same, just different implementations (e.g BungeeCommy instead of SpigotCommy)._
 
 ### Bukkit/Spigot
 
@@ -51,6 +53,50 @@ public class SpigotPlugin extends JavaPlugin {
     }
 }
 ```
+
+Adding additional handlers for intercepting messages in string form.
+````java
+/**
+ * A simple Spigot plugin demonstrating the use of Commy
+ */
+public class SpigotPlugin extends JavaPlugin {
+
+    // Universal logger
+    public static final Logger LOGGER = Bukkit.getLogger();
+
+    // Pre-"defining" a commy at class-level
+    private SpigotCommy commy;
+
+    @Override
+    public void onEnable() {
+        // Initialize commy, calling setup will
+        // start the engines
+        this.commy = new SpigotCommy(this).setup();
+
+        // Adding handlers, you can add as many as you want
+        commy.addHandler("test", new TestHandler());
+    }
+
+    public SpigotCommy getCommy() {
+        return commy;
+    }
+
+    /**
+     * Handles a test message
+     */
+    private static class TestHandler implements MessageHandler<Player> {
+
+        @Override
+        public void handle(Connection<Player> conn, String tag, String message) {
+            // We know tag == test, otherwise it would have been intercepted through the default handler
+            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
+
+            // Respond!
+            conn.sendMessage("test", "I heard your test message and is sending this back through the \"test\" pipe");
+        }
+    }
+}
+````
 
 ## Deployment
 
