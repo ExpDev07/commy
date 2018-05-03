@@ -1,4 +1,6 @@
-package me.expdev.commy.bungee;
+package me.expdev.commy.spigotplugin;
+
+import me.expdev.commy.core.Message;
 
 public class TestObject implements Message {
 

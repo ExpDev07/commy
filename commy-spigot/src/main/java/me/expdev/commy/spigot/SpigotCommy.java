@@ -1,7 +1,10 @@
-package me.expdev.commy.bungee;
+package me.expdev.commy.spigot;
 
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
+import me.expdev.commy.core.Commy;
+import me.expdev.commy.core.Connection;
+import me.expdev.commy.core.Message;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.messaging.PluginMessageListener;

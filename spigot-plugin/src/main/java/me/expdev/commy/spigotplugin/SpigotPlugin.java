@@ -1,7 +1,9 @@
-package me.expdev.commy.bungee;
+package me.expdev.commy.spigotplugin;
 
-import me.expdev.commy.bungee.handler.AbstractMessageHandler;
-import me.expdev.commy.bungee.handler.MessageHandler;
+import me.expdev.commy.core.Connection;
+import me.expdev.commy.core.handler.AbstractMessageHandler;
+import me.expdev.commy.core.handler.MessageHandler;
+import me.expdev.commy.spigot.SpigotCommy;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;

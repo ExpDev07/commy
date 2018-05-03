@@ -1,6 +1,6 @@
-package me.expdev.commy.bungee;
+package me.expdev.commy.core;
 
-import me.expdev.commy.bungee.handler.MessageHandler;
+import me.expdev.commy.core.handler.MessageHandler;
 
 import java.util.HashMap;
 import java.util.Map;

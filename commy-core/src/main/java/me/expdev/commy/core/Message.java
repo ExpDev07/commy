@@ -1,4 +1,4 @@
-package me.expdev.commy.bungee;
+package me.expdev.commy.core;
 
 /**
  * A message

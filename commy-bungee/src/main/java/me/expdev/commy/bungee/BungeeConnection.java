@@ -3,10 +3,12 @@ package me.expdev.commy.bungee;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
+import me.expdev.commy.core.Connection;
+import me.expdev.commy.core.Message;
 import net.md_5.bungee.api.config.ServerInfo;
 
 /**
- * A bungee implementation of commy's connection
+ * A spigotplugin implementation of commy's connection
  */
 public class BungeeConnection implements Connection<ServerInfo> {
 

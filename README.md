@@ -57,7 +57,9 @@ public class SpigotPlugin extends JavaPlugin {
     }
     
     /**
-     * Handles a test message
+     * Handles a test message. The parameter of MessageHandler is the type 
+     * of source we will communicate with, which for Spigot's case is
+     * always Player
      */
     private static class TestHandler implements MessageHandler<Player> {
 

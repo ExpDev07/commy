@@ -1,6 +1,6 @@
-package me.expdev.commy.bungee.handler;
+package me.expdev.commy.core.handler;
 
-import me.expdev.commy.bungee.Connection;
+import me.expdev.commy.core.Connection;
 
 /**
  * A simple handler interface for handling messages

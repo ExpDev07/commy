@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3fc8835-8b0d-4992-a72f-43365c171699" name="Default" comment="">
+    <list default="true" id="c3fc8835-8b0d-4992-a72f-43365c171699" name="Default" comment="Relocation of packages.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bungee-plugin/src/main/resources/plugin.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spigot-plugin/src/main/resources/plugin.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-bungee/target/classes/me/expdev/commy/BungeeCommy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-core/target/classes/me/expdev/commy/Commy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-spigot/target/classes/me/expdev/commy/SpigotCommy.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungee/BungeePlugin.java" afterPath="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/BungeePlugin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungee/TestObject.java" afterPath="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/TestObject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Commy.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Commy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Connection.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Connection.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Message.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Message.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/handler/AbstractMessageHandler.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/handler/AbstractMessageHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/handler/MessageHandler.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/handler/MessageHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotCommy.java" afterPath="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotCommy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotConnection.java" afterPath="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotConnection.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/bungee/SpigotPlugin.java" afterPath="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/spigotplugin/SpigotPlugin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/bungee/TestObject.java" afterPath="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/spigotplugin/TestObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/commy-bungee-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/commy-bungee/target/commy-bungee-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/commy-core-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/commy-core/target/commy-core-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/commy-spigot-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/commy-spigot/target/commy-spigot-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeCommy.java" afterPath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeCommy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeConnection.java" afterPath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/commy-bungee/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/commy-core/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/commy-spigot/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +69,8 @@
       <file leaf-file-name="BungeeCommy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeCommy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="312">
+              <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -49,96 +79,69 @@
       <file leaf-file-name="BungeeConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpigotConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotConnection.java">
+      <file leaf-file-name="BungeePlugin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/BungeePlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="363">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/TestObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SpigotCommy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotCommy.java">
+        <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotCommy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spigot-plugin/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="-65">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SpigotPlugin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/bungee/SpigotPlugin.java">
+        <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/spigotplugin/SpigotPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+            <state relative-caret-position="-138">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="245">
-                <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-                <folding>
-                  <marker date="1525352047157" expanded="true" signature="942:1006" ph="/**...*/" />
-                  <marker date="1525352047157" expanded="true" signature="1258:1895" ph="{...}" />
-                  <marker date="1525352047157" expanded="true" signature="1268:1336" ph="//..." />
-                  <marker date="1525352047157" expanded="true" signature="1398:1479" ph="//..." />
-                  <marker date="1525352047157" expanded="true" signature="1698:1836" ph="//..." />
-                  <marker date="1525352047157" expanded="true" signature="1931:1960" ph="{...}" />
-                  <marker date="1525352047157" expanded="true" signature="1970:2011" ph="/**...*/" />
-                  <marker date="1525352047157" expanded="true" signature="2083:2723" ph="{...}" />
-                  <marker date="1525352047157" expanded="true" signature="2184:2717" ph="{...}" />
-                  <marker date="1525352047157" expanded="true" signature="2416:2589" ph="//..." />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LICENSE.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="119">
-                <caret line="2" column="318" lean-forward="true" selection-start-line="2" selection-start-column="318" selection-end-line="2" selection-end-column="318" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -150,6 +153,30 @@
               <first_editor relative-caret-position="457">
                 <caret line="91" column="55" lean-forward="false" selection-start-line="91" selection-start-column="55" selection-end-line="91" selection-end-column="55" />
                 <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="182">
+                <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+                <folding>
+                  <marker date="1525352979645" expanded="true" signature="942:1006" ph="/**...*/" />
+                  <marker date="1525352979645" expanded="true" signature="1258:1895" ph="{...}" />
+                  <marker date="1525352979645" expanded="true" signature="1268:1336" ph="//..." />
+                  <marker date="1525352979645" expanded="true" signature="1398:1479" ph="//..." />
+                  <marker date="1525352979645" expanded="true" signature="1698:1836" ph="//..." />
+                  <marker date="1525352979645" expanded="true" signature="1931:1960" ph="{...}" />
+                  <marker date="1525352979645" expanded="true" signature="1970:2148" ph="/**...*/" />
+                  <marker date="1525352979645" expanded="true" signature="2220:2860" ph="{...}" />
+                  <marker date="1525352979645" expanded="true" signature="2321:2854" ph="{...}" />
+                  <marker date="1525352979645" expanded="true" signature="2553:2726" ph="//..." />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -182,17 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/me/expdev/commy/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/expdev/commy/Commy.java" />
-        <option value="$PROJECT_DIR$/bungee/src/main/java/me/expdev/commy/BungeeCommy.java" />
-        <option value="$PROJECT_DIR$/spigot/src/main/java/me/expdev/commy/SpigotCommy.java" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/spigot/pom.xml" />
-        <option value="$PROJECT_DIR$/bungee/pom.xml" />
-        <option value="$PROJECT_DIR$/commy-core/pom.xml" />
-        <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/RecieverProvider.java" />
         <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/ReceiverProvider.java" />
         <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/SenderProvider.java" />
         <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/MessagingProvider.java" />
@@ -218,7 +234,6 @@
         <option value="$PROJECT_DIR$/bungee-plugin/pom.xml" />
         <option value="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/BungeeConnection.java" />
         <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/core/spigot/SpigotConnection.java" />
-        <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotConnection.java" />
         <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/SpigotConnection.java" />
         <option value="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungee/BungeePlugin.java" />
         <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/handler/MessageHandler.java" />
@@ -226,12 +241,24 @@
         <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Connection.java" />
         <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Message.java" />
         <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Commy.java" />
-        <option value="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeCommy.java" />
-        <option value="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeConnection.java" />
         <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotConnection.java" />
         <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotCommy.java" />
         <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
         <option value="$PROJECT_DIR$/LICENSE.md" />
+        <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/spigotplugin/Commy.java" />
+        <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Message.java" />
+        <option value="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/handler/AbstractMessageHandler.java" />
+        <option value="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/spigotplugin/BungeeCommy.java" />
+        <option value="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeConnection.java" />
+        <option value="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeCommy.java" />
+        <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigotplugin/SpigotCommy.java" />
+        <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotConnection.java" />
+        <option value="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/spigotplugin/SpigotPlugin.java" />
+        <option value="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/spigotplugin/BungeePlugin.java" />
+        <option value="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/TestObject.java" />
+        <option value="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/BungeePlugin.java" />
+        <option value="$PROJECT_DIR$/spigot-plugin/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/bungee-plugin/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -434,15 +461,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Commy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commy" type="462c0819:PsiDirectoryNode" />
-              <item name="spigot-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bungee" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -461,6 +479,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -602,7 +621,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525273774321</updated>
       <workItem from="1525273777978" duration="9127000" />
-      <workItem from="1525327048076" duration="15401000" />
+      <workItem from="1525327048076" duration="16331000" />
     </task>
     <task id="LOCAL-00001" summary="Final??">
       <created>1525338882888</created>
@@ -674,11 +693,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525351996884</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Relocation of packages.">
+      <created>1525352052647</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1525352052647</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24528000" />
+    <option name="totallyTimeSpent" value="25458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -698,6 +724,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -709,7 +736,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,7 +773,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Connection.java">
+    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
@@ -771,7 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/bungee/SpigotPlugin.java">
+    <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/spigotplugin/SpigotPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
@@ -779,7 +805,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotCommy.java">
+    <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotCommy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="64" lean-forward="false" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
@@ -895,22 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/bungee/TestObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungee/TestObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commy-spigot/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -943,90 +953,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/handler/MessageHandler.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="2" column="318" lean-forward="false" selection-start-line="2" selection-start-column="318" selection-end-line="2" selection-end-column="318" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spigot-plugin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Commy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/handler/AbstractMessageHandler.java">
+    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/handler/MessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="153">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Connection.java">
+    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/core/handler/AbstractMessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="170">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Message.java">
+    <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/spigotplugin/TestObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="391">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/bungee/Commy.java">
+    <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1053">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungee/BungeePlugin.java">
+    <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/spigot/SpigotCommy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="-65">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeCommy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="312">
+          <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/bungee/BungeeConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotConnection.java">
+    <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/TestObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/bungee/SpigotCommy.java">
+    <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/bungeeplugin/BungeePlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="363">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bungee-plugin/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/spigotplugin/SpigotPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1042,49 +1111,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="2" column="318" lean-forward="true" selection-start-line="2" selection-start-column="318" selection-end-line="2" selection-end-column="318" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/bungee/SpigotPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spigot-plugin/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="245">
-            <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <first_editor relative-caret-position="182">
+            <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
             <folding>
-              <marker date="1525352047157" expanded="true" signature="942:1006" ph="/**...*/" />
-              <marker date="1525352047157" expanded="true" signature="1258:1895" ph="{...}" />
-              <marker date="1525352047157" expanded="true" signature="1268:1336" ph="//..." />
-              <marker date="1525352047157" expanded="true" signature="1398:1479" ph="//..." />
-              <marker date="1525352047157" expanded="true" signature="1698:1836" ph="//..." />
-              <marker date="1525352047157" expanded="true" signature="1931:1960" ph="{...}" />
-              <marker date="1525352047157" expanded="true" signature="1970:2011" ph="/**...*/" />
-              <marker date="1525352047157" expanded="true" signature="2083:2723" ph="{...}" />
-              <marker date="1525352047157" expanded="true" signature="2184:2717" ph="{...}" />
-              <marker date="1525352047157" expanded="true" signature="2416:2589" ph="//..." />
+              <marker date="1525352979645" expanded="true" signature="942:1006" ph="/**...*/" />
+              <marker date="1525352979645" expanded="true" signature="1258:1895" ph="{...}" />
+              <marker date="1525352979645" expanded="true" signature="1268:1336" ph="//..." />
+              <marker date="1525352979645" expanded="true" signature="1398:1479" ph="//..." />
+              <marker date="1525352979645" expanded="true" signature="1698:1836" ph="//..." />
+              <marker date="1525352979645" expanded="true" signature="1931:1960" ph="{...}" />
+              <marker date="1525352979645" expanded="true" signature="1970:2148" ph="/**...*/" />
+              <marker date="1525352979645" expanded="true" signature="2220:2860" ph="{...}" />
+              <marker date="1525352979645" expanded="true" signature="2321:2854" ph="{...}" />
+              <marker date="1525352979645" expanded="true" signature="2553:2726" ph="//..." />
             </folding>
           </first_editor>
           <second_editor />

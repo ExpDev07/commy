@@ -2,6 +2,9 @@ package me.expdev.commy.bungee;
 
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
+import me.expdev.commy.core.Commy;
+import me.expdev.commy.core.Connection;
+import me.expdev.commy.core.Message;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.event.PluginMessageEvent;

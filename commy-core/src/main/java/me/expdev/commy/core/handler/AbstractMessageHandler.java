@@ -1,7 +1,7 @@
-package me.expdev.commy.bungee.handler;
+package me.expdev.commy.core.handler;
 
 import com.google.gson.Gson;
-import me.expdev.commy.bungee.Connection;
+import me.expdev.commy.core.Connection;
 
 /**
  * An abstract handler for handling of incoming objects
