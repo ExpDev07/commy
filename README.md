@@ -37,12 +37,10 @@ public class SpigotPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Initialize commy, calling setup will
-        // start the engines
+        // Initialize commy, calling setup will start the engines
         this.commy = new SpigotCommy(this).setup();
 
-        // Setup a default handler using lambda
-        // Setting this is not obligatory
+        // Setup a default handler using lambda. Setting this is not obligatory
         commy.setDefaultHandler((conn, tag, message) -> LOGGER.info(
                 String.format("[%s] Recieved an unknown message from %s: %s", tag, conn.getSender().getName(), message)
         ));

@@ -23,19 +23,17 @@ public class SpigotPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Initialize commy, calling setup will
-        // start the engines
+        // Initialize commy, calling setup will start the engines
         this.commy = new SpigotCommy(this).setup();
 
-        // Setup a default handler using lambda
-        // Setting this is not obligatory
+        // Setup a default handler using lambda. Setting this is not obligatory
         commy.setDefaultHandler((conn, tag, message) -> LOGGER.info(
                 String.format("[%s] Recieved an unknown message from %s: %s", tag, conn.getSender().getName(), message)
         ));
 
         // Adding handlers, you can add as many as you want
+        // The first parameter here is the "pipe" the handler will handle messages for
         commy.addHandler("test", new TestHandler());
-        commy.addHandler("test_msg", new AbstractTestHandler());
     }
 
     public SpigotCommy getCommy() {
@@ -43,7 +41,9 @@ public class SpigotPlugin extends JavaPlugin {
     }
 
     /**
-     * Handles a test message
+     * Handles a test message. The parameter of MessageHandler is the type
+     * of source we will communicate with, which for Spigot's case is
+     * always Player
      */
     private static class TestHandler implements MessageHandler<Player> {
 
@@ -52,7 +52,8 @@ public class SpigotPlugin extends JavaPlugin {
             // We know tag == test, otherwise it would have been intercepted through the default handler
             LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
 
-            // Respond!
+            // Respond! Here, the source we're communicating with will need to have a handler for the "test"
+            // pipe, otherwise it will be rerouted to their default handler
             conn.sendMessage("test", "I heard your test message and is sending this back through the \"test\" pipe");
         }
     }
