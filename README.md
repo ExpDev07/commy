@@ -42,39 +42,9 @@ Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use
 </dependencies>
 ````
 
-These dependencies are not packaged in Spigot or BungeeCord, so you have to manually shade them. It can be achieved by adding this to your pom.xml. Note that by default, gson will also be shaded. This is because it is not apparent in some Spigot versions, however, you can exclude gson from being shaded in by adding the configurations.
-````xml
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-shade-plugin</artifactId>
-            <version>3.1.1</version>
-            <configuration>
-                <!-- put your configurations here, not needed for this -->
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>shade</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-````
+These dependencies are not packaged in Spigot or BungeeCord, so you have to manually shade them. It can be achieved by adding this to your pom.xml. Note that by default, gson will also be shaded. This is because it is not apparent in some Spigot versions, however, you can exclude gson from being shaded in by adding the configurations. [Here's how you use the Maven Shade Plugin](https://maven.apache.org/plugins/maven-shade-plugin/usage.html).
 
 It is important that you have ``<scope>provided</scope>`` on the BungeeCord and Spigot dependency, otherwise they will also be shaded (which we do not want).
-````xml
-<dependency>
-    <groupId>net.md-5</groupId>
-    <artifactId>bungeecord-api</artifactId>
-    <version>1.12-SNAPSHOT</version>
-    <scope>provided</scope> <!-- here -->
-</dependency>
-````
 
 Now, to compile, just run ``mvn clean install``.
 
