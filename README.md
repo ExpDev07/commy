@@ -48,6 +48,7 @@ public class SpigotPlugin extends JavaPlugin {
         ));
         
         // Adding handlers, you can add as many as you want
+        // The first parameter here is the "pipe" the handler will handle messages for
         commy.addHandler("test", new TestHandler());
     }
 
