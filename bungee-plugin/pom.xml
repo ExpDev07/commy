@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>commy-bungee</artifactId>
+    <artifactId>bungee-plugin</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -49,7 +49,7 @@
     <dependencies>
         <dependency>
             <groupId>me.expdev</groupId>
-            <artifactId>commy-core</artifactId>
+            <artifactId>commy-bungee</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

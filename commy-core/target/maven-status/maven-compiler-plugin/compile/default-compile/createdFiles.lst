@@ -1,3 +1,5 @@
-me\expdev\commy\SenderProvider.class
 me\expdev\commy\Commy.class
-me\expdev\commy\MessageHandler.class
+me\expdev\commy\Message.class
+me\expdev\commy\handler\MessageHandler.class
+me\expdev\commy\handler\AbstractMessageHandler.class
+me\expdev\commy\Connection.class

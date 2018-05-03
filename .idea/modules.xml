@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/bungee-plugin/bungee-plugin.iml" filepath="$PROJECT_DIR$/bungee-plugin/bungee-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/commy.iml" filepath="$PROJECT_DIR$/commy.iml" />
       <module fileurl="file://$PROJECT_DIR$/commy-bungee/commy-bungee.iml" filepath="$PROJECT_DIR$/commy-bungee/commy-bungee.iml" />
       <module fileurl="file://$PROJECT_DIR$/commy-core/commy-core.iml" filepath="$PROJECT_DIR$/commy-core/commy-core.iml" />

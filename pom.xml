@@ -13,6 +13,7 @@
         <module>commy-bungee</module>
         <module>commy-spigot</module>
         <module>spigot-plugin</module>
+        <module>bungee-plugin</module>
     </modules>
 
     <build>

@@ -3,21 +3,19 @@ package me.expdev.commy;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
-import net.md_5.bungee.api.config.ServerInfo;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- * Project created by ExpDev
- */
+public class SpigotConnection implements Connection<Player> {
 
-
-public class BungeeConnection implements Connection<ServerInfo> {
-
+    private JavaPlugin plugin;
+    private Player player;
     private String channel;
-    private ServerInfo server;
 
-    public BungeeConnection(String channel, ServerInfo server) {
+    public SpigotConnection(JavaPlugin plugin, Player player, String channel) {
+        this.plugin = plugin;
+        this.player = player;
         this.channel = channel;
-        this.server = server;
     }
 
     @Override
@@ -25,7 +23,7 @@ public class BungeeConnection implements Connection<ServerInfo> {
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
         out.writeUTF(tag);
         out.writeUTF(message);
-        server.sendData(channel, out.toByteArray());
+        player.sendPluginMessage(plugin, channel, out.toByteArray());
     }
 
     @Override
@@ -34,9 +32,7 @@ public class BungeeConnection implements Connection<ServerInfo> {
     }
 
     @Override
-    public ServerInfo getSender() {
-        return server;
+    public Player getSender() {
+        return player;
     }
-
-
 }

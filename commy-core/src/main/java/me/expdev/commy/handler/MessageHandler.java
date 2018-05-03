@@ -1,14 +1,19 @@
 package me.expdev.commy.handler;
 
 import me.expdev.commy.Connection;
-import me.expdev.commy.provider.MessagingProvider;
-import me.expdev.commy.provider.SenderProvider;
 
 /**
  * A simple handler interface for handling messages
  */
-public interface MessageHandler {
+public interface MessageHandler<T> {
 
-    void handle(Connection sender, String tag, String message);
+    /**
+     * Handles a incoming message
+     *
+     * @param conn    Connection for message
+     * @param tag     Tag of message
+     * @param message Message recieved
+     */
+    void handle(Connection<T> conn, String tag, String message);
 
 }

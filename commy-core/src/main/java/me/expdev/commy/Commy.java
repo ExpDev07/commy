@@ -1,8 +1,6 @@
 package me.expdev.commy;
 
 import me.expdev.commy.handler.MessageHandler;
-import me.expdev.commy.provider.MessagingProvider;
-import me.expdev.commy.provider.SenderProvider;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,14 +8,16 @@ import java.util.Map;
 /**
  * Base commy implementation
  *
- * @param <P> Type of reciever that we will send messages to
+ * @param <T> Type of reciever that we will send messages to
  */
-public abstract class Commy<P> implements MessagingProvider {
+public abstract class Commy<T> {
 
+    // Global channel id, doesn't have to be used by each implementation,
+    // but is preferred
     public static final String CHANNEL_ID = "Commy";
 
-    private MessageHandler defaultHandler = null;
-    private Map<String, MessageHandler> handlers = new HashMap<String, MessageHandler>();
+    private MessageHandler<T> defaultHandler = null;
+    private Map<String, MessageHandler<T>> handlers = new HashMap<String, MessageHandler<T>>();
 
     /**
      * Constructs a commy
@@ -32,7 +32,7 @@ public abstract class Commy<P> implements MessagingProvider {
      *
      * @param handler Handler
      */
-    public void setDefaultHandler(MessageHandler handler) {
+    public void setDefaultHandler(MessageHandler<T> handler) {
         this.defaultHandler = handler;
     }
 
@@ -42,8 +42,8 @@ public abstract class Commy<P> implements MessagingProvider {
      * @param tag Tag
      * @param handler Handler
      */
-    public void addHandler(String tag, MessageHandler handler) {
-        handlers.put(tag, handler);
+    public void addHandler(String tag, MessageHandler<T> handler) {
+        handlers.put(tag.toLowerCase(), handler);
     }
 
     /**
@@ -52,9 +52,9 @@ public abstract class Commy<P> implements MessagingProvider {
      * @param tag Routing tag/id of message
      * @param message Message to handle
      */
-    protected void handleMessage(Connection sender, String tag, String message) {
+    protected void handleMessage(Connection<T> sender, String tag, String message) {
         // Attempt to route to appropriate handler
-        MessageHandler handler = handlers.get(tag);
+        MessageHandler<T> handler = handlers.get(tag);
         if (handler == null) {
             // Have message handled by default handler if set
             if (defaultHandler != null) defaultHandler.handle(sender, tag, message);
@@ -70,5 +70,30 @@ public abstract class Commy<P> implements MessagingProvider {
      * @return Self
      */
     public abstract Commy setup();
+
+    /**
+     * Sends a message to target through a specified pipe
+     *
+     * @param target  Target to send to
+     * @param tag     Pipe to send through
+     * @param message Message to send
+     */
+    public abstract void sendMessage(T target, String tag, String message);
+
+    /**
+     * Sends a message to target
+     *
+     * @param target  Target to send to
+     * @param message Message to send
+     */
+    public abstract void sendMessage(T target, Message message);
+
+    /**
+     * Gets a connection with the target
+     *
+     * @param target Target to get connection with
+     * @return Connection with target
+     */
+    public abstract Connection<T> getConnection(T target);
 
 }

@@ -1,3 +1,5 @@
-C:\Users\Marius\Desktop\IntelliJ projects\commy\commy-core\src\main\java\me\expdev\commy\Commy.java
-C:\Users\Marius\Desktop\IntelliJ projects\commy\commy-core\src\main\java\me\expdev\commy\MessageHandler.java
-C:\Users\Marius\Desktop\IntelliJ projects\commy\commy-core\src\main\java\me\expdev\commy\SenderProvider.java
+C:\Users\mariusri\Desktop\IdeaProjects\Commy\commy-core\src\main\java\me\expdev\commy\Commy.java
+C:\Users\mariusri\Desktop\IdeaProjects\Commy\commy-core\src\main\java\me\expdev\commy\handler\MessageHandler.java
+C:\Users\mariusri\Desktop\IdeaProjects\Commy\commy-core\src\main\java\me\expdev\commy\Message.java
+C:\Users\mariusri\Desktop\IdeaProjects\Commy\commy-core\src\main\java\me\expdev\commy\handler\AbstractMessageHandler.java
+C:\Users\mariusri\Desktop\IdeaProjects\Commy\commy-core\src\main\java\me\expdev\commy\Connection.java
