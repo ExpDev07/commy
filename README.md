@@ -15,6 +15,68 @@ You will need to download Maven, as the modules _commy-spigot_ and _commy-bungee
 Your IDE most likely comes with maven pre-installed (like IntelliJ), but if it  doesn't you can [manually download Maven from here](https://maven.apache.org/download.cgi).
 
 Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use _commy-spigot_. If you are making a BungeeCord plugin, use _commy-bungee_.
+````xml
+<repositories>
+    <repository>
+        <id>ossrh</id>
+        <name>Commy Repository</name>
+        <url>https://oss.sonatype.org/content/groups/public/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <!-- Use this for any Spigot plugin -->
+        <dependency>
+            <groupId>com.github.expdev07</groupId>
+            <artifactId>commy-spigot</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- Use this for any BungeeCord plugin -->
+        <dependency>
+            <groupId>com.github.expdev07</groupId>
+            <artifactId>commy-bungee</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependency>
+</dependencies>
+````
+
+These dependencies are not packaged in Spigot or BungeeCord, so you have to manually shade them. It can be achieved by adding this to your pom.xml. Note that by default, gson will also be shaded. This is because it is not apparent in some Spigot versions, however, you can exclude gson from being shaded in by adding the configurations.
+````xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.1.1</version>
+            <configuration>
+                <!-- put your configurations here, not needed for this -->
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+````
+
+It is important that you have ``<scope>provided</scope>`` on the BungeeCord and Spigot dependency, otherwise they will also be shaded (which we do not want).
+````xml
+<dependency>
+    <groupId>net.md-5</groupId>
+    <artifactId>bungeecord-api</artifactId>
+    <version>1.12-SNAPSHOT</version>
+    <scope>provided</scope> <!-- here -->
+</dependency>
+````
+
+Now, to compile, just run ``mvn clean install``.
 
 ## Examples
 

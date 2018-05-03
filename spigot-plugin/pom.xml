@@ -18,7 +18,7 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
-                    <!-- put your configurations here -->
+                    <!-- put your configurations here, not needed for this -->
                 </configuration>
                 <executions>
                     <execution>
