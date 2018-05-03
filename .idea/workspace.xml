@@ -2,52 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3fc8835-8b0d-4992-a72f-43365c171699" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bungee-plugin/bungee-plugin.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bungee-plugin/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/BungeePlugin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bungee-plugin/src/main/java/me/expdev/commy/TestObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Message.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/SpigotConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/TestObject.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/provider/MessagingProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/provider/ReceiverProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/provider/SenderProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-core/target/classes/me/expdev/commy/MessageHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-core/target/classes/me/expdev/commy/SenderProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/classes/me/expdev/commy/BungeeCommy.class" afterPath="$PROJECT_DIR$/commy-bungee/target/classes/me/expdev/commy/BungeeCommy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/commy-bungee-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/commy-bungee/target/commy-bungee-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/classes/me/expdev/commy/Commy.class" afterPath="$PROJECT_DIR$/commy-core/target/classes/me/expdev/commy/Commy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/commy-core-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/commy-core/target/commy-core-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/classes/me/expdev/commy/SpigotCommy.class" afterPath="$PROJECT_DIR$/commy-spigot/target/classes/me/expdev/commy/SpigotCommy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/commy-spigot-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/commy-spigot/target/commy-spigot-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/pom.xml" afterPath="$PROJECT_DIR$/commy-bungee/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/BungeeCommy.java" afterPath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/BungeeCommy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/BungeeConnection.java" afterPath="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/BungeeConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/commy-bungee/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/commy-bungee/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Commy.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Commy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Connection.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Connection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/handler/AbstractMessageHandler.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/handler/AbstractMessageHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/handler/MessageHandler.java" afterPath="$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/handler/MessageHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/commy-core/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/commy-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/pom.xml" afterPath="$PROJECT_DIR$/commy-spigot/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/SpigotCommy.java" afterPath="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/SpigotCommy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/commy-spigot/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/commy-spigot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spigot-plugin/pom.xml" afterPath="$PROJECT_DIR$/spigot-plugin/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/SpigotPlugin.java" afterPath="$PROJECT_DIR$/spigot-plugin/src/main/java/me/expdev/commy/SpigotPlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -84,17 +40,7 @@
         <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -140,12 +86,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="205">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="51">
+                <caret line="2" column="75" lean-forward="false" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -243,6 +202,7 @@
         <option value="$PROJECT_DIR$/bungee-plugin/pom.xml" />
         <option value="$PROJECT_DIR$/commy-spigot/src/main/java/me/expdev/commy/SpigotConnection.java" />
         <option value="$PROJECT_DIR$/commy-bungee/src/main/java/me/expdev/commy/BungeeConnection.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -577,12 +537,20 @@
       <option name="presentableId" value="Default" />
       <updated>1525273774321</updated>
       <workItem from="1525273777978" duration="9127000" />
-      <workItem from="1525327048076" duration="10183000" />
+      <workItem from="1525327048076" duration="10358000" />
     </task>
+    <task id="LOCAL-00001" summary="Final??">
+      <created>1525338882888</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525338882888</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19310000" />
+    <option name="totallyTimeSpent" value="19485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -621,6 +589,13 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Final??" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final??" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -715,6 +690,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -722,6 +698,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -729,6 +706,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,6 +714,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -870,7 +849,7 @@
     <entry file="file://$PROJECT_DIR$/commy-core/src/main/java/me/expdev/commy/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -933,9 +912,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="205">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="2" column="75" lean-forward="false" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
