@@ -8,11 +8,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You will need to download Maven, as the modules commy-spigot and commy-bungee needs to be shaded with their respective plugins.
+You will need to download Maven, as the modules _commy-spigot_ and _commy-bungee_ needs to be shaded with their respective plugins.
 
 ### Installing
 
 Your IDE most likely comes with maven pre-installed (like IntelliJ), but if it  doesn't you can [manually download Maven from here](https://maven.apache.org/download.cgi).
+
+Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use _commy-spigot_. If you are making a BungeeCord plugin, use _commy-bungee_.
 
 ## Examples
 
@@ -49,10 +51,6 @@ public class SpigotPlugin extends JavaPlugin {
         // The first parameter here is the "pipe" the handler will handle messages for
         commy.addHandler("test", new TestHandler());
     }
-
-    public SpigotCommy getCommy() {
-        return commy;
-    }
     
     /**
      * Handles a test message. The parameter of MessageHandler is the type 
@@ -76,7 +74,7 @@ public class SpigotPlugin extends JavaPlugin {
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Once you have shaded commy, all you have to do is put your plugin inside your _/plugins_ folder as regular.
 
 ## Built With
 

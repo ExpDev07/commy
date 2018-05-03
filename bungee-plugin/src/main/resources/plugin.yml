@@ -1,5 +1,5 @@
 name: BungeePlugin
 authors: [ExpDev]
 version: 1.0-SNAPSHOT
-main: me.expdev.commy.bungeeplugin.BungeePlugin
+main: BungeePlugin
 description: A bungee plugin for testing Commy
