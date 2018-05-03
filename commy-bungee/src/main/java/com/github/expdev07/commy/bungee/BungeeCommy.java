@@ -53,7 +53,7 @@ public class BungeeCommy extends Commy<ServerInfo> {
      * @param port  Port to search for
      * @return Server with matching port, null if not found
      */
-    private static ServerInfo findServerWirhPort(ProxyServer proxy, int port) {
+    private static ServerInfo findServerWithPort(ProxyServer proxy, int port) {
         return proxy.getServers().values().stream().filter(
                 info -> info.getAddress().getPort() == port
         ).findFirst().orElse(null);
@@ -78,7 +78,7 @@ public class BungeeCommy extends Commy<ServerInfo> {
             if (!event.getTag().equals(CHANNEL_ID)) return;
 
             // Finding the server which matches our connection
-            ServerInfo server = findServerWirhPort(plugin.getProxy(), event.getSender().getAddress().getPort());
+            ServerInfo server = findServerWithPort(plugin.getProxy(), event.getSender().getAddress().getPort());
             if (server == null) {
                 plugin.getLogger().warning("Could not identify source of message. Proceeding anyways.");
             }
