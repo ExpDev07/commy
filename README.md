@@ -22,7 +22,7 @@ _Please note that both commy-spigot and commy-bungee uses the same base-interfac
 
 ### Bukkit/Spigot
 
-Setting up Commy and assigning a default handler. The default handler will be used when a message does not find its pipe. You can set it at null (not set it).
+Setting up Commy and assigning a default handler and an additional handler for intercepting a string message. The default handler will be used when a message does not find its pipe. You can set it as null (not set it).
 ```java
 /**
  * A simple Spigot plugin demonstrating the use of Commy
@@ -46,33 +46,7 @@ public class SpigotPlugin extends JavaPlugin {
         commy.setDefaultHandler((conn, tag, message) -> LOGGER.info(
                 String.format("[%s] Recieved an unknown message from %s: %s", tag, conn.getSender().getName(), message)
         ));
-    }
-
-    public SpigotCommy getCommy() {
-        return commy;
-    }
-}
-```
-
-Adding additional handlers for intercepting messages in string form.
-````java
-/**
- * A simple Spigot plugin demonstrating the use of Commy
- */
-public class SpigotPlugin extends JavaPlugin {
-
-    // Universal logger
-    public static final Logger LOGGER = Bukkit.getLogger();
-
-    // Pre-"defining" a commy at class-level
-    private SpigotCommy commy;
-
-    @Override
-    public void onEnable() {
-        // Initialize commy, calling setup will
-        // start the engines
-        this.commy = new SpigotCommy(this).setup();
-
+        
         // Adding handlers, you can add as many as you want
         commy.addHandler("test", new TestHandler());
     }
@@ -80,7 +54,7 @@ public class SpigotPlugin extends JavaPlugin {
     public SpigotCommy getCommy() {
         return commy;
     }
-
+    
     /**
      * Handles a test message
      */
@@ -96,7 +70,7 @@ public class SpigotPlugin extends JavaPlugin {
         }
     }
 }
-````
+```
 
 ## Deployment
 
