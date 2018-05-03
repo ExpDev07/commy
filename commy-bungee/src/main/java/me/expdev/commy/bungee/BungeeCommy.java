@@ -1,4 +1,4 @@
-package me.expdev.commy;
+package me.expdev.commy.bungee;
 
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;

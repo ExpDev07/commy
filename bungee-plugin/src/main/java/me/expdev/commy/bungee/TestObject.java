@@ -1,4 +1,4 @@
-package me.expdev.commy;
+package me.expdev.commy.bungee;
 
 public class TestObject implements Message {
 

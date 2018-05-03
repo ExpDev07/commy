@@ -1,7 +1,7 @@
-package me.expdev.commy.handler;
+package me.expdev.commy.bungee.handler;
 
 import com.google.gson.Gson;
-import me.expdev.commy.Connection;
+import me.expdev.commy.bungee.Connection;
 
 /**
  * Project created by ExpDev

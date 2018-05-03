@@ -1,6 +1,6 @@
-package me.expdev.commy;
+package me.expdev.commy.bungee;
 
-import me.expdev.commy.handler.MessageHandler;
+import me.expdev.commy.bungee.handler.MessageHandler;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.plugin.Plugin;

@@ -1,7 +1,7 @@
-package me.expdev.commy;
+package me.expdev.commy.bungee;
 
-import me.expdev.commy.handler.AbstractMessageHandler;
-import me.expdev.commy.handler.MessageHandler;
+import me.expdev.commy.bungee.handler.AbstractMessageHandler;
+import me.expdev.commy.bungee.handler.MessageHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
