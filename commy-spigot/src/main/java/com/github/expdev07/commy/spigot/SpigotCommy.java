@@ -16,7 +16,7 @@ import org.bukkit.plugin.messaging.PluginMessageListener;
  *
  * <b>Note: </b> uses Object as receiver type as it is unused
  */
-public class SpigotCommy extends Commy<Player> implements PluginMessageListener {
+public class SpigotCommy extends Commy<Player> {
 
     private JavaPlugin plugin;
 
@@ -26,18 +26,9 @@ public class SpigotCommy extends Commy<Player> implements PluginMessageListener 
 
     @Override
     public SpigotCommy setup() {
-        plugin.getServer().getMessenger().registerIncomingPluginChannel(plugin, CHANNEL_ID, this);
+        plugin.getServer().getMessenger().registerIncomingPluginChannel(plugin, CHANNEL_ID, new MessageListener(this));
         plugin.getServer().getMessenger().registerOutgoingPluginChannel(plugin, CHANNEL_ID);
         return this;
-    }
-
-    @Override
-    public void onPluginMessageReceived(String channel, Player player, byte[] bytes) {
-        // Make sure we are intercepting our own messages
-        if (!channel.equals(CHANNEL_ID)) return;
-
-        ByteArrayDataInput in = ByteStreams.newDataInput(bytes);
-        this.handleMessage(this.getConnection(player), in.readUTF(), in.readUTF());
     }
 
     @Override
@@ -64,4 +55,26 @@ public class SpigotCommy extends Commy<Player> implements PluginMessageListener 
     public Connection<Player> getConnection(Player target) {
         return new SpigotConnection(plugin, target, CHANNEL_ID);
     }
+
+    /**
+     * Own class to isolate the #onPluginMessageReceived(...) method
+     */
+    private static class MessageListener implements PluginMessageListener {
+
+        private SpigotCommy commy;
+
+        public MessageListener(SpigotCommy commy) {
+            this.commy = commy;
+        }
+
+        @Override
+        public void onPluginMessageReceived(String channel, Player player, byte[] bytes) {
+            // Make sure we are intercepting our own messages
+            if (!channel.equals(CHANNEL_ID)) return;
+
+            ByteArrayDataInput in = ByteStreams.newDataInput(bytes);
+            commy.handleMessage(commy.getConnection(player), in.readUTF(), in.readUTF());
+        }
+    }
+
 }

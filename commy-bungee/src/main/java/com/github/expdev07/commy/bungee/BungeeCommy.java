@@ -15,7 +15,7 @@ import net.md_5.bungee.event.EventHandler;
 /**
  * Bungee's implementation of commy
  */
-public class BungeeCommy extends Commy<ServerInfo> implements Listener {
+public class BungeeCommy extends Commy<ServerInfo> {
 
     private Plugin plugin;
 
@@ -26,26 +26,9 @@ public class BungeeCommy extends Commy<ServerInfo> implements Listener {
     @Override
     public BungeeCommy setup() {
         plugin.getProxy().registerChannel(CHANNEL_ID);
-        plugin.getProxy().getPluginManager().registerListener(plugin, this);
+        plugin.getProxy().getPluginManager().registerListener(plugin, new MessageListener(plugin, this));
         return this;
     }
-
-    @EventHandler
-    public void onPluginMessageReceived(PluginMessageEvent event) {
-        // Make sure we are intercepting our own messages
-        if (!event.getTag().equals(CHANNEL_ID)) return;
-
-        // Finding the server which matches our connection
-        ServerInfo server = findServerWirhPort(plugin.getProxy(), event.getSender().getAddress().getPort());
-        if (server == null) {
-            plugin.getLogger().warning("Could not identify source of message. Proceeding anyways.");
-        }
-
-        // Receive the message1
-        ByteArrayDataInput in = ByteStreams.newDataInput(event.getData());
-        this.handleMessage(this.getConnection(server), in.readUTF(), in.readUTF());
-    }
-
 
     @Override
     public void sendMessage(ServerInfo target, String tag, String message) {
@@ -74,6 +57,36 @@ public class BungeeCommy extends Commy<ServerInfo> implements Listener {
         return proxy.getServers().values().stream().filter(
                 info -> info.getAddress().getPort() == port
         ).findFirst().orElse(null);
+    }
+
+    /**
+     * Own class to isolate the #onPluginMessageReceived(...) method
+     */
+    private static class MessageListener implements Listener {
+
+        private Plugin plugin;
+        private BungeeCommy commy;
+
+        public MessageListener(Plugin plugin, BungeeCommy commy) {
+            this.plugin = plugin;
+            this.commy = commy;
+        }
+
+        @EventHandler
+        public void onPluginMessageReceived(PluginMessageEvent event) {
+            // Make sure we are intercepting our own messages
+            if (!event.getTag().equals(CHANNEL_ID)) return;
+
+            // Finding the server which matches our connection
+            ServerInfo server = findServerWirhPort(plugin.getProxy(), event.getSender().getAddress().getPort());
+            if (server == null) {
+                plugin.getLogger().warning("Could not identify source of message. Proceeding anyways.");
+            }
+
+            // Receive the message1
+            ByteArrayDataInput in = ByteStreams.newDataInput(event.getData());
+            commy.handleMessage(commy.getConnection(server), in.readUTF(), in.readUTF());
+        }
     }
 
 }
