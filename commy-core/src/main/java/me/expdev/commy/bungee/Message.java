@@ -1,5 +1,8 @@
 package me.expdev.commy.bungee;
 
+/**
+ * A message
+ */
 public interface Message {
 
     /**

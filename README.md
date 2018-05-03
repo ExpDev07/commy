@@ -1,6 +1,6 @@
 # Commy
 
-Introducing **Commy**, a simple yet powerful framework which simplifies the use of Plugin Messaging Channels.
+Introducing **Commy**, a simple yet powerful framework which simplifies the use of [Plugin Messaging Channels](https://www.spigotmc.org/wiki/bukkit-bungee-plugin-messaging-channel/).
 
 ## Getting Started
 
@@ -63,13 +63,13 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
 * **Marius Richardsen** - *Initial work* - [ExpDev](https://github.com/ExpDev07)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ExpDev07/Commy/contributors) who participated in this project.
 
 ## License
 

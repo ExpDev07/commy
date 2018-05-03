@@ -6,6 +6,9 @@ import com.google.gson.Gson;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * A spigot implementation of commy's connection
+ */
 public class SpigotConnection implements Connection<Player> {
 
     private JavaPlugin plugin;

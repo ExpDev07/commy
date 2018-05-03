@@ -32,7 +32,6 @@ public class BungeePlugin extends Plugin {
 
         // Adding handlers, you can add as many as you want
         commy.addHandler("test", new TestHandler());
-        commy.addHandler("test_msg", new TestHandler());
     }
 
     public BungeeCommy getCommy() {

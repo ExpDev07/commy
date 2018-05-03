@@ -4,7 +4,10 @@ import com.google.gson.Gson;
 import me.expdev.commy.bungee.Connection;
 
 /**
- * Project created by ExpDev
+ * An abstract handler for handling of incoming objects
+ *
+ * @param <T> Type of source we will communicate with
+ * @param <M> Type of message to send
  */
 public abstract class AbstractMessageHandler<T, M> implements MessageHandler<T> {
 

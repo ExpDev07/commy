@@ -4,6 +4,8 @@ import me.expdev.commy.bungee.Connection;
 
 /**
  * A simple handler interface for handling messages
+ *
+ * @param <T> Type of source we will communicate with
  */
 public interface MessageHandler<T> {
 

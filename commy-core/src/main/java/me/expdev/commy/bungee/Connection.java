@@ -1,7 +1,7 @@
 package me.expdev.commy.bungee;
 
 /**
- * Project created by ExpDev
+ * A connection with a source
  */
 public interface Connection<T> {
 

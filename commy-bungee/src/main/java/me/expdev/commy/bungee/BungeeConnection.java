@@ -6,10 +6,8 @@ import com.google.gson.Gson;
 import net.md_5.bungee.api.config.ServerInfo;
 
 /**
- * Project created by ExpDev
+ * A bungee implementation of commy's connection
  */
-
-
 public class BungeeConnection implements Connection<ServerInfo> {
 
     private String channel;

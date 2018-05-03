@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Base commy implementation
  *
- * @param <T> Type of reciever that we will send messages to
+ * @param <T> Type of source that we will send messages to
  */
 public abstract class Commy<T> {
 

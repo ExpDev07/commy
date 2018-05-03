@@ -34,6 +34,9 @@ public class BungeeCommy extends Commy<ServerInfo> implements Listener {
 
         // Finding the server which matches our connection
         ServerInfo server = findServerWirhPort(plugin.getProxy(), event.getSender().getAddress().getPort());
+        if (server == null) {
+            plugin.getLogger().warning("Could not identify source of message. Proceeding anyways.");
+        }
 
         // Receive the message1
         ByteArrayDataInput in = ByteStreams.newDataInput(event.getData());
