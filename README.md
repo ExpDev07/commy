@@ -4,7 +4,7 @@ Introducing **Commy**, a simple yet powerful framework which simplifies the use 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will help you setup a plugin using _Commy_.
 
 ### Prerequisites
 
@@ -86,7 +86,7 @@ _Please note that both commy-spigot and commy-bungee uses the same base-interfac
 
 ### Bukkit/Spigot
 
-Setting up Commy and assigning a default handler and an additional handler for intercepting a string message. The default handler will be used when a message does not find its pipe. You can set it as null (not set it).
+Setting up _Commy_ and assigning a default handler and an additional handler for intercepting a string message. The default handler will be used when a message does not find its pipe. You can set it as null (not set it).
 ```java
 /**
  * A simple Spigot plugin demonstrating the use of Commy
