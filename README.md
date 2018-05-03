@@ -8,11 +8,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Maven
+You will need to download Maven, as the modules commy-spigot and commy-bungee needs to be shaded with their respective plugins.
 
 ### Installing
 
-
+Your IDE most likely comes with maven pre-installed (like IntelliJ), but if it  doesn't you can [manually download Maven from here](https://maven.apache.org/download.cgi).
 
 ## Examples
 
