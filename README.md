@@ -42,6 +42,8 @@ Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use
 </dependencies>
 ````
 
+Maven repo can be found at [The Central Repository](https://search.maven.org/beta/search?q=g:com.github.expdev07). 
+
 #### Shading
 These dependencies are not packaged in Spigot or BungeeCord, so you have to manually shade them. It can be achieved by adding this to your pom.xml. Note that by default, gson will also be shaded. This is because it is not apparent in some Spigot versions, however, you can exclude gson from being shaded in by adding the configurations. [Here's how you use the Maven Shade Plugin](https://maven.apache.org/plugins/maven-shade-plugin/usage.html).
 
