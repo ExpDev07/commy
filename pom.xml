@@ -8,6 +8,30 @@
     <artifactId>commy</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+
+    <name>Commy</name>
+    <description>A project making working with Plugin Messaging Channels much easier</description>
+    <url>https://github.com/ExpDev07/Commy</url>
+    <scm>
+        <connection>scm:git:git@github.com:ExpDev07/Commy.git</connection>
+        <developerConnection>scm:git:git@github.com:ExpDev07/Commy.git</developerConnection>
+        <url>git@github.com:ExpDev07/Commy.git</url>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>ExpDev</id>
+        </developer>
+    </developers>
+
     <modules>
         <module>commy-core</module>
         <module>commy-bungee</module>
@@ -27,6 +51,14 @@
         </repository>
     </distributionManagement>
 
+    <properties>
+        <build.number>unknown</build.number>
+        <netty.version>4.1.24.Final</netty.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -35,6 +67,34 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <aggregate>true</aggregate>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>animal-sniffer-maven-plugin</artifactId>
+                <version>1.16</version>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <signature>
+                        <groupId>org.codehaus.mojo.signature</groupId>
+                        <artifactId>java18</artifactId>
+                        <version>1.0</version>
+                    </signature>
                 </configuration>
             </plugin>
         </plugins>
