@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 import net.md_5.bungee.api.config.ServerInfo;
 
 /**
- * A spigotplugin implementation of commy's connection
+ * A bungee plugin implementation of commy's connection
  */
 public class BungeeConnection implements Connection<ServerInfo> {
 
