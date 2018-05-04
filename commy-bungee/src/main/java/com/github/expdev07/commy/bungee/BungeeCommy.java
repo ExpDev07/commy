@@ -86,6 +86,7 @@ public class BungeeCommy extends Commy<ServerInfo> {
             // Receive the message1
             ByteArrayDataInput in = ByteStreams.newDataInput(event.getData());
             commy.handleMessage(commy.getConnection(server), in.readUTF(), in.readUTF());
+            event.setCancelled(true); // Prevent message leaks
         }
     }
 

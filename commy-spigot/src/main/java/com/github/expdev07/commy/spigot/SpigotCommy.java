@@ -28,6 +28,7 @@ public class SpigotCommy extends Commy<Player> {
     public SpigotCommy setup() {
         plugin.getServer().getMessenger().registerIncomingPluginChannel(plugin, CHANNEL_ID, new MessageListener(this));
         plugin.getServer().getMessenger().registerOutgoingPluginChannel(plugin, CHANNEL_ID);
+
         return this;
     }
 
