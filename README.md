@@ -133,4 +133,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* md_5 and his team for designing the Plugin Messaging Channels.
+* Dinnerbone for designing the Plugin Messaging Channels.
