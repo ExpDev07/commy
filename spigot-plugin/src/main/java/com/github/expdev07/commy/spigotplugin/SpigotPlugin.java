@@ -35,16 +35,6 @@ public class SpigotPlugin extends JavaPlugin {
         // The first parameter here is the "pipe" the handler will handle messages for
         commy.addHandler("test", new TestHandler());
         commy.addHandler("test_msg", new AbstractTestHandler());
-
-        LOGGER.info("Sending message to Bungee in 10 seconds...");
-        Bukkit.getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
-            @Override
-            public void run() {
-                LOGGER.info("Sending message...");
-                commy.sendMessage("test", "This is a message from " + getName());
-                LOGGER.info("Message sent!");
-            }
-        }, 20 * 10L);
     }
 
     /**
@@ -85,7 +75,6 @@ public class SpigotPlugin extends JavaPlugin {
             // which means this will have to manually be specified
             return TestObject.class;
         }
-
 
     }
 

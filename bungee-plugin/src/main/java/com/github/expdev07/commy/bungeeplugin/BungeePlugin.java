@@ -26,12 +26,6 @@ public class BungeePlugin extends Plugin {
         // start the engines
         this.commy = new BungeeCommy(this).setup();
 
-        // Setup a default handler using lambda
-        // Setting this is not obligatory
-        commy.setDefaultHandler((conn, tag, message) -> LOGGER.info(
-                String.format("[%s] Recieved an unknown message from %s: %s", tag, conn.getSender().getName(), message)
-        ));
-
         // Adding handlers, you can add as many as you want
         commy.addHandler("test", new TestHandler());
     }

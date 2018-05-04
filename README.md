@@ -60,7 +60,7 @@ _Please note that both commy-spigot and commy-bungee uses the same base-interfac
 
 ### Bukkit/Spigot
 
-Setting up _Commy_ and assigning a default handler and an additional handler for intercepting a string message. The default handler will be used when a message does not find its pipe. You can set it as null (not set it).
+Setting up _Commy_ and assigning a default handler, a handler for intercepting a string message, and a handler for receiving a custom object. The default handler will be used when a message does not find its pipe. You can set it as null (not set it).
 ```java
 /**
  * A simple Spigot plugin demonstrating the use of Commy
@@ -82,14 +82,15 @@ public class SpigotPlugin extends JavaPlugin {
         commy.setDefaultHandler((conn, tag, message) -> LOGGER.info(
                 String.format("[%s] Recieved an unknown message from %s: %s", tag, conn.getSender().getName(), message)
         ));
-        
+
         // Adding handlers, you can add as many as you want
         // The first parameter here is the "pipe" the handler will handle messages for
         commy.addHandler("test", new TestHandler());
+        commy.addHandler("test_msg", new AbstractTestHandler());
     }
-    
+
     /**
-     * Handles a test message. The parameter of MessageHandler is the type 
+     * Handles a test message. The parameter of MessageHandler is the type
      * of source we will communicate with, which for Spigot's case is
      * always Player
      */
@@ -100,13 +101,80 @@ public class SpigotPlugin extends JavaPlugin {
             // We know tag == test, otherwise it would have been intercepted through the default handler
             LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
 
-            // Respond! Here, the source we're communicating with will need to have a handler for the "test" 
+            // Respond! Here, the source we're communicating with will need to have a handler for the "test"
             // pipe, otherwise it will be rerouted to their default handler
             conn.sendMessage("test", "I heard your test message and is sending this back through the \"test\" pipe");
         }
     }
+
+    /**
+     * A simple handler to test out how to use the abstract handler to
+     * send objects over the pipes
+     */
+    private static class AbstractTestHandler extends AbstractMessageHandler<Player, TestObject> {
+
+        @Override
+        public void handle(Connection<Player> conn, String tag, TestObject message) {
+            // We recieved a "TestObject" object, manipulate it as you want
+            LOGGER.info(String.format(
+                    "Recieved a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
+            );
+        }
+
+        @Override
+        public Class<TestObject> getMessageType() {
+            // This is important as generics is not available in run-time,
+            // which means this will have to manually be specified
+            return TestObject.class;
+        }
+        
+    }
+
 }
 ```
+
+### BungeeCord
+
+Setting up _Commy_ in a BungeeCord plugin, then sending a custom object/message once a test message is recieved.
+````java
+/**
+ * A simple Bungee plugin demonstrating the use of Commy
+ */
+public class BungeePlugin extends Plugin {
+
+    // Universal logger
+    public static final Logger LOGGER = ProxyServer.getInstance().getLogger();
+
+    // Pre-"defining" a commy at class-level
+    private BungeeCommy commy;
+
+    @Override
+    public void onEnable() {
+        // Initialize commy, calling setup will
+        // start the engines
+        this.commy = new BungeeCommy(this).setup();
+
+        // Adding handlers, you can add as many as you want
+        commy.addHandler("test", new TestHandler());
+    }
+
+    /**
+     * Handles a test message
+     */
+    private static class TestHandler implements MessageHandler<ServerInfo> {
+
+        @Override
+        public void handle(Connection<ServerInfo> conn, String tag, String message) {
+            // We know tag == test, otherwise it would have been intercepted through the default handler
+            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
+
+            // Let's respond by sending them a TestObject
+            conn.sendMessage(new TestObject("ExpDev", 2));
+        }
+    }
+
+}
+````
 
 Find more examples [for SpigotMC](spigot-plugin) and [for BungeeCord](bungee-plugin).
 
