@@ -37,8 +37,8 @@ public class SpigotConnection implements Connection<Player> {
     }
 
     @Override
-    public void sendMessage(Message message) {
-        this.sendMessage(message.getTag(), new Gson().toJson(message));
+    public void sendMessage(String tag, Message message) {
+        this.sendMessage(tag, new Gson().toJson(message));
     }
 
     @Override

@@ -41,7 +41,7 @@ public class BungeePlugin extends Plugin {
             LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
 
             // Let's respond by sending them a TestObject
-            conn.sendMessage(new TestObject("ExpDev", 2));
+            conn.sendMessage("test_obj", new TestObject("ExpDev", 2));
         }
     }
 

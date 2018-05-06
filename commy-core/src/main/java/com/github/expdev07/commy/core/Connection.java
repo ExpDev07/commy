@@ -5,26 +5,27 @@ package com.github.expdev07.commy.core;
  */
 public interface Connection<T> {
 
-   /**
+    /**
     * Sends a message to the connection
     *
     * @param tag     Tag of message
     * @param message Message (string) to send
     */
-   void sendMessage(String tag, String message);
+    void sendMessage(String tag, String message);
 
-   /**
+    /**
     * Sends a message to the connection
     *
-    * @param message Message to send
+     * @param tag     Tag of message
+     * @param message Message to send
     */
-   void sendMessage(Message message);
+    void sendMessage(String tag, Message message);
 
-   /**
+    /**
     * Gets the "sender" for the connection
     *
     * @return Sender o
     */
-   T getSender();
+    T getSender();
 
 }

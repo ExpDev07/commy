@@ -28,7 +28,6 @@ public class SpigotCommy extends Commy<Player> {
     public SpigotCommy setup() {
         plugin.getServer().getMessenger().registerIncomingPluginChannel(plugin, CHANNEL_ID, new MessageListener(this));
         plugin.getServer().getMessenger().registerOutgoingPluginChannel(plugin, CHANNEL_ID);
-
         return this;
     }
 
@@ -38,8 +37,8 @@ public class SpigotCommy extends Commy<Player> {
     }
 
     @Override
-    public void sendMessage(Player target, Message message) {
-        this.getConnection(target).sendMessage(message);
+    public void sendMessage(Player target, String tag, Message message) {
+        this.getConnection(target).sendMessage(tag, message);
     }
 
     /**

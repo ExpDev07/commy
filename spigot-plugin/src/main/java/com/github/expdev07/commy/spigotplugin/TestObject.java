@@ -19,9 +19,4 @@ public class TestObject implements Message {
     public int getId() {
         return id;
     }
-
-    @Override
-    public String getTag() {
-        return "test_msg";
-    }
 }

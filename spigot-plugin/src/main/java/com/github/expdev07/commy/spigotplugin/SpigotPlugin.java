@@ -26,11 +26,6 @@ public class SpigotPlugin extends JavaPlugin {
         // Initialize commy, calling setup will start the engines
         this.commy = new SpigotCommy(this).setup();
 
-        // Setup a default handler using lambda. Setting this is not obligatory
-        commy.setDefaultHandler((conn, tag, message) -> LOGGER.info(
-                String.format("[%s] Recieved an unknown message from %s: %s", tag, conn.getSender().getName(), message)
-        ));
-
         // Adding handlers, you can add as many as you want
         // The first parameter here is the "pipe" the handler will handle messages for
         commy.addHandler("test", new TestHandler());

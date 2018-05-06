@@ -36,8 +36,8 @@ public class BungeeCommy extends Commy<ServerInfo> {
     }
 
     @Override
-    public void sendMessage(ServerInfo target, Message message) {
-        this.getConnection(target).sendMessage(message);
+    public void sendMessage(ServerInfo target, String tag, Message message) {
+        this.getConnection(target).sendMessage(tag, message);
     }
 
     @Override
