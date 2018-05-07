@@ -1,6 +1,8 @@
 # Commy
 
-Introducing **Commy**, a simple yet powerful framework which simplifies the use of [Plugin Messaging Channels](https://www.spigotmc.org/wiki/bukkit-bungee-plugin-messaging-channel/). _The name is not communist-inspired._ 
+Introducing **Commy**, a simple yet powerful framework which simplifies the use of [Plugin Messaging Channels](https://www.spigotmc.org/wiki/bukkit-bungee-plugin-messaging-channel/). _The name is not communist-inspired._
+
+For immidiate support, join my [Discord Channel](https://discord.gg/veFY5c3). 
 
 ## Getting Started
 
