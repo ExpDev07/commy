@@ -27,19 +27,17 @@ Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use
 </repositories>
 
 <dependencies>
+    <!-- Use this for any Spigot plugin -->
     <dependency>
-        <!-- Use this for any Spigot plugin -->
-        <dependency>
-            <groupId>com.github.expdev07</groupId>
-            <artifactId>commy-spigot</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <!-- Use this for any BungeeCord plugin -->
-        <dependency>
-            <groupId>com.github.expdev07</groupId>
-            <artifactId>commy-bungee</artifactId>
-            <version>1.1</version>
-        </dependency>
+        <groupId>com.github.expdev07</groupId>
+        <artifactId>commy-spigot</artifactId>
+        <version>1.1</version>
+    </dependency>
+    <!-- Use this for any BungeeCord plugin -->
+    <dependency>
+        <groupId>com.github.expdev07</groupId>
+        <artifactId>commy-bungee</artifactId>
+        <version>1.1</version>
     </dependency>
 </dependencies>
 ````
