@@ -30,13 +30,13 @@ Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use
         <dependency>
             <groupId>com.github.expdev07</groupId>
             <artifactId>commy-spigot</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
         <!-- Use this for any BungeeCord plugin -->
         <dependency>
             <groupId>com.github.expdev07</groupId>
             <artifactId>commy-bungee</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
     </dependencies>
 </project>
