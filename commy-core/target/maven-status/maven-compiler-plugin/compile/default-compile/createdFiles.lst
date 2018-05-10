@@ -1,5 +1,4 @@
 com\github\expdev07\commy\core\Connection.class
-com\github\expdev07\commy\core\Message.class
 com\github\expdev07\commy\core\message\LocationMessage.class
 com\github\expdev07\commy\core\Commy.class
 com\github\expdev07\commy\core\handler\AbstractMessageHandler.class
