@@ -86,7 +86,7 @@ public abstract class Commy<T> {
      * @param target  Target to send to
      * @param message Message to send
      */
-    public abstract void sendMessage(T target, String tag, Message message);
+    public abstract void sendMessage(T target, String tag, Object message);
 
     /**
      * Gets a connection with the target

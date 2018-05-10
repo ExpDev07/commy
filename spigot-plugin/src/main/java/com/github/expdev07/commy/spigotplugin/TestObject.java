@@ -1,8 +1,6 @@
 package com.github.expdev07.commy.spigotplugin;
 
-import com.github.expdev07.commy.core.Message;
-
-public class TestObject implements Message {
+public class TestObject {
 
     private String name;
     private int id;

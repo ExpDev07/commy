@@ -19,7 +19,7 @@ public interface Connection<T> {
      * @param tag     Tag of message
      * @param message Message to send
     */
-    void sendMessage(String tag, Message message);
+    void sendMessage(String tag, Object message);
 
     /**
     * Gets the "sender" for the connection

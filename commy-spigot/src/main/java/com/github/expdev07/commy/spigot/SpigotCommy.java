@@ -2,7 +2,6 @@ package com.github.expdev07.commy.spigot;
 
 import com.github.expdev07.commy.core.Commy;
 import com.github.expdev07.commy.core.Connection;
-import com.github.expdev07.commy.core.Message;
 import com.google.common.collect.Iterables;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
@@ -13,8 +12,6 @@ import org.bukkit.plugin.messaging.PluginMessageListener;
 
 /**
  * Spigot implementation of commy
- *
- * <b>Note: </b> uses Object as receiver type as it is unused
  */
 public class SpigotCommy extends Commy<Player> {
 
@@ -37,7 +34,7 @@ public class SpigotCommy extends Commy<Player> {
     }
 
     @Override
-    public void sendMessage(Player target, String tag, Message message) {
+    public void sendMessage(Player target, String tag, Object message) {
         this.getConnection(target).sendMessage(tag, message);
     }
 

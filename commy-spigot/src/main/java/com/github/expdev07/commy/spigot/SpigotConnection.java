@@ -1,7 +1,6 @@
 package com.github.expdev07.commy.spigot;
 
 import com.github.expdev07.commy.core.Connection;
-import com.github.expdev07.commy.core.Message;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
@@ -37,7 +36,7 @@ public class SpigotConnection implements Connection<Player> {
     }
 
     @Override
-    public void sendMessage(String tag, Message message) {
+    public void sendMessage(String tag, Object message) {
         this.sendMessage(tag, new Gson().toJson(message));
     }
 

@@ -16,16 +16,16 @@ Your IDE most likely comes with maven pre-installed (like IntelliJ), but if it  
 
 Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use _commy-spigot_. If you are making a BungeeCord plugin, use _commy-bungee_.
 ````xml
-<repositories>
-    <repository>
-        <id>ossrh</id>
-        <name>Commy Repository</name>
-        <url>https://oss.sonatype.org/content/groups/public/</url>
-    </repository>
-</repositories>
-
-<dependencies>
-    <dependency>
+<project>
+    <repositories>
+        <repository>
+            <id>ossrh</id>
+            <name>Commy Repository</name>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+    </repositories>
+    
+    <dependencies>
         <!-- Use this for any Spigot plugin -->
         <dependency>
             <groupId>com.github.expdev07</groupId>
@@ -38,8 +38,8 @@ Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use
             <artifactId>commy-bungee</artifactId>
             <version>1.1</version>
         </dependency>
-    </dependency>
-</dependencies>
+    </dependencies>
+</project>
 ````
 
 Maven repo can be found at [The Central Repository](https://search.maven.org/beta/search?q=g:com.github.expdev07). 

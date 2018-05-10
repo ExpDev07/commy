@@ -1,11 +1,9 @@
 package com.github.expdev07.commy.core.message;
 
-import com.github.expdev07.commy.core.Message;
-
 /**
  * A location
  */
-public class LocationMessage implements Message {
+public class LocationMessage {
 
     private String world;
 

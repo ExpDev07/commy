@@ -2,7 +2,6 @@ package com.github.expdev07.commy.bungee;
 
 import com.github.expdev07.commy.core.Commy;
 import com.github.expdev07.commy.core.Connection;
-import com.github.expdev07.commy.core.Message;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
 import net.md_5.bungee.api.ProxyServer;
@@ -36,7 +35,7 @@ public class BungeeCommy extends Commy<ServerInfo> {
     }
 
     @Override
-    public void sendMessage(ServerInfo target, String tag, Message message) {
+    public void sendMessage(ServerInfo target, String tag, Object message) {
         this.getConnection(target).sendMessage(tag, message);
     }
 
