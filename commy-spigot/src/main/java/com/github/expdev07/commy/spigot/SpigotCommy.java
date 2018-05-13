@@ -19,33 +19,24 @@ public class SpigotCommy extends Commy<Player> {
 
     public SpigotCommy(JavaPlugin plugin) {
         this.plugin = plugin;
+        setup();
     }
 
     @Override
-    public SpigotCommy setup() {
+    public void setup() {
         plugin.getServer().getMessenger().registerIncomingPluginChannel(plugin, CHANNEL_ID, new MessageListener(this));
         plugin.getServer().getMessenger().registerOutgoingPluginChannel(plugin, CHANNEL_ID);
-        return this;
-    }
-
-    @Override
-    public void sendMessage(Player target, String tag, String message) {
-        this.getConnection(target).sendMessage(tag, message);
-    }
-
-    @Override
-    public void sendMessage(Player target, String tag, Object message) {
-        this.getConnection(target).sendMessage(tag, message);
     }
 
     /**
      * Helper method to just quickly send a string message
      * to BungeeCord
      *
+     * @param proxy   Proxy to route message to
      * @param message Message to send
      */
-    public void sendMessage(String tag, String message) {
-        this.sendMessage(Iterables.getFirst(Bukkit.getOnlinePlayers(), null), tag, message);
+    public void sendMessage(String proxy, String message) {
+        this.getConnection(Iterables.getFirst(Bukkit.getOnlinePlayers(), null)).sendMessage(proxy, message);
     }
 
     @Override
@@ -56,7 +47,7 @@ public class SpigotCommy extends Commy<Player> {
     /**
      * Own class to isolate the #onPluginMessageReceived(...) method
      */
-    private static class MessageListener implements PluginMessageListener {
+    public class MessageListener implements PluginMessageListener {
 
         private SpigotCommy commy;
 
@@ -70,7 +61,7 @@ public class SpigotCommy extends Commy<Player> {
             if (!channel.equals(CHANNEL_ID)) return;
 
             ByteArrayDataInput in = ByteStreams.newDataInput(bytes);
-            commy.handleMessage(commy.getConnection(player), in.readUTF(), in.readUTF());
+            commy.handleMessage(commy.getConnection(player), in.readUTF(), in.readUTF().getBytes());
         }
     }
 

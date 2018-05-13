@@ -1,5 +1,5 @@
 name: SpigotPlugin
 authors: [ExpDev]
 version: 1.0-SNAPSHOT
-main: SpigotPlugin
+main:  com.github.expdev07.commy.spigotplugin.SpigotPlugin
 description: A spigot plugin for testing Commy

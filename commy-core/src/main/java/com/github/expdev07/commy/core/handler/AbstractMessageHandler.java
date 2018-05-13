@@ -15,18 +15,18 @@ public abstract class AbstractMessageHandler<T, M> implements MessageHandler<T> 
     private final static Gson GSON = new Gson();
 
     @Override
-    public void handle(Connection<T> sender, String tag, String message) {
-        this.handle(sender, tag, GSON.fromJson(message, this.getMessageType()));
+    public void handle(Connection<T> sender, String proxy, byte[] message) {
+        this.handle(sender, proxy, GSON.fromJson(new String(message), this.getMessageType()));
     }
 
     /**
      * Handle an incoming abstract message
      *
      * @param sender Sender of message
-     * @param tag Tag
+     * @param proxy proxy
      * @param message Message to handle
      */
-    public abstract void handle(Connection<T> sender, String tag, M message);
+    public abstract void handle(Connection<T> sender, String proxy, M message);
 
     /**
      * Gets type of message

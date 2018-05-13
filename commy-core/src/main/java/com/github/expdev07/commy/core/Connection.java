@@ -6,20 +6,28 @@ package com.github.expdev07.commy.core;
 public interface Connection<T> {
 
     /**
-    * Sends a message to the connection
-    *
-    * @param tag     Tag of message
+     * Sends a message to the connection
+     *
+     * @param proxy   Proxy to direct message to
+     * @param message Message (bytes) to send
+     */
+    void sendMessage(String proxy, byte[] message);
+
+    /**
+     * Sends a message to the connection
+     *
+     * @param proxy   Proxy to direct message to
     * @param message Message (string) to send
     */
-    void sendMessage(String tag, String message);
+    void sendMessage(String proxy, String message);
 
     /**
     * Sends a message to the connection
     *
-     * @param tag     Tag of message
+     * @param proxy   Proxy to direct message to
      * @param message Message to send
     */
-    void sendMessage(String tag, Object message);
+    void sendMessage(String proxy, Object message);
 
     /**
     * Gets the "sender" for the connection

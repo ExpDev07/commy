@@ -20,16 +20,21 @@ public class BungeeConnection implements Connection<ServerInfo> {
     }
 
     @Override
-    public void sendMessage(String tag, String message) {
+    public void sendMessage(String proxy, byte[] message) {
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
-        out.writeUTF(tag);
-        out.writeUTF(message);
+        out.writeUTF(proxy);
+        out.writeUTF(new String(message));
         server.sendData(channel, out.toByteArray());
     }
 
     @Override
-    public void sendMessage(String tag, Object message) {
-        this.sendMessage(tag, new Gson().toJson(message));
+    public void sendMessage(String proxy, String message) {
+        this.sendMessage(proxy, message.getBytes());
+    }
+
+    @Override
+    public void sendMessage(String proxy, Object message) {
+        this.sendMessage(proxy, new Gson().toJson(message));
     }
 
     @Override

@@ -23,7 +23,6 @@ public abstract class Commy<T> {
      * Constructs a commy
      */
     public Commy() {
-
     }
 
     /**
@@ -49,44 +48,25 @@ public abstract class Commy<T> {
     /**
      * Handles a message
      *
-     * @param tag Routing tag/id of message
+     * @param proxy Routing proxy/id of message
      * @param message Message to handle
      */
-    protected void handleMessage(Connection<T> sender, String tag, String message) {
+    protected void handleMessage(Connection<T> sender, String proxy, byte[] message) {
         // Attempt to route to appropriate handler
-        MessageHandler<T> handler = handlers.get(tag);
+        MessageHandler<T> handler = handlers.get(proxy);
         if (handler == null) {
             // Have message handled by default handler if set
-            if (defaultHandler != null) defaultHandler.handle(sender, tag, message);
+            if (defaultHandler != null) defaultHandler.handle(sender, proxy, message);
             return;
         }
         // Handle message appropriately
-        handler.handle(sender, tag, message);
+        handler.handle(sender, proxy, message);
     }
 
     /**
      * Setup appropriate stuff
-     *
-     * @return Self
      */
-    public abstract Commy setup();
-
-    /**
-     * Sends a message to target through a specified pipe
-     *
-     * @param target  Target to send to
-     * @param tag     Pipe to send through
-     * @param message Message to send
-     */
-    public abstract void sendMessage(T target, String tag, String message);
-
-    /**
-     * Sends a message to target
-     *
-     * @param target  Target to send to
-     * @param message Message to send
-     */
-    public abstract void sendMessage(T target, String tag, Object message);
+    public abstract void setup();
 
     /**
      * Gets a connection with the target

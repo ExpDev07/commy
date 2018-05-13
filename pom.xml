@@ -7,7 +7,7 @@
     <groupId>com.github.expdev07</groupId>
     <artifactId>commy</artifactId>
     <packaging>pom</packaging>
-    <version>1.2</version>
+    <version>1.3</version>
 
     <name>Commy</name>
     <description>A project making working with Plugin Messaging Channels much easier</description>

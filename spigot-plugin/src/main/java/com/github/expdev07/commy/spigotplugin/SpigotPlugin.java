@@ -2,8 +2,10 @@ package com.github.expdev07.commy.spigotplugin;
 
 import com.github.expdev07.commy.core.Connection;
 import com.github.expdev07.commy.core.handler.AbstractMessageHandler;
-import com.github.expdev07.commy.core.handler.MessageHandler;
+import com.github.expdev07.commy.core.handler.StringMessageHandler;
 import com.github.expdev07.commy.spigot.SpigotCommy;
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,7 +26,7 @@ public class SpigotPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         // Initialize commy, calling setup will start the engines
-        this.commy = new SpigotCommy(this).setup();
+        this.commy = new SpigotCommy(this);
 
         // Adding handlers, you can add as many as you want
         // The first parameter here is the "pipe" the handler will handle messages for
@@ -33,11 +35,34 @@ public class SpigotPlugin extends JavaPlugin {
     }
 
     /**
+     * A method demonstrating some usage
+     */
+    private void sendMessage() {
+        // Get a connection with a player
+        Connection<Player> connection = commy.getConnection(Bukkit.getPlayer("ExpDev"));
+
+        // Now, there are many ways you can send a message
+        //   * You can just send a simple string
+        connection.sendMessage("test_proxy", "This is a message");
+        //   * You can send a custom object!
+        connection.sendMessage("test_proxy", new Object());
+        //   * You can send bytes like you normally would
+        ByteArrayDataOutput input = ByteStreams.newDataOutput();
+        input.writeUTF("A string");
+        input.writeBoolean(true);
+        input.writeInt(3);
+        connection.sendMessage("test_proxy", input.toByteArray());
+
+        // You can also "quick send" a message
+        commy.sendMessage("test_proxy", "Message to send");
+    }
+
+    /**
      * Handles a test message. The parameter of MessageHandler is the type
      * of source we will communicate with, which for Spigot's case is
      * always Player
      */
-    private static class TestHandler implements MessageHandler<Player> {
+    private static class TestHandler extends StringMessageHandler<Player> {
 
         @Override
         public void handle(Connection<Player> conn, String tag, String message) {

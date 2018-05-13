@@ -20,23 +20,13 @@ public class BungeeCommy extends Commy<ServerInfo> {
 
     public BungeeCommy(Plugin plugin) {
         this.plugin = plugin;
+        setup();
     }
 
     @Override
-    public BungeeCommy setup() {
+    public void setup() {
         plugin.getProxy().registerChannel(CHANNEL_ID);
         plugin.getProxy().getPluginManager().registerListener(plugin, new MessageListener(plugin, this));
-        return this;
-    }
-
-    @Override
-    public void sendMessage(ServerInfo target, String tag, String message) {
-        this.getConnection(target).sendMessage(tag, message);
-    }
-
-    @Override
-    public void sendMessage(ServerInfo target, String tag, Object message) {
-        this.getConnection(target).sendMessage(tag, message);
     }
 
     @Override
@@ -61,7 +51,7 @@ public class BungeeCommy extends Commy<ServerInfo> {
     /**
      * Own class to isolate the #onPluginMessageReceived(...) method
      */
-    private static class MessageListener implements Listener {
+    public class MessageListener implements Listener {
 
         private Plugin plugin;
         private BungeeCommy commy;
@@ -78,14 +68,13 @@ public class BungeeCommy extends Commy<ServerInfo> {
 
             // Finding the server which matches our connection
             ServerInfo server = findServerWithPort(plugin.getProxy(), event.getSender().getAddress().getPort());
-            if (server == null) {
-                plugin.getLogger().warning("Could not identify source of message. Proceeding anyways.");
-            }
 
-            // Receive the message1
+            // Receive the message
             ByteArrayDataInput in = ByteStreams.newDataInput(event.getData());
-            commy.handleMessage(commy.getConnection(server), in.readUTF(), in.readUTF());
-            event.setCancelled(true); // Prevent message leaks
+            commy.handleMessage(commy.getConnection(server), in.readUTF(), in.readUTF().getBytes());
+
+            // Prevent message leaks to player
+            event.setCancelled(true);
         }
     }
 

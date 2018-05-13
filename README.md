@@ -8,6 +8,8 @@ These instructions will help you setup a plugin using _Commy_.
 
 ### Prerequisites
 
+Java 8
+
 You will need to download Maven, as the modules _commy-spigot_ and _commy-bungee_ needs to be shaded with their respective plugins.
 
 ### Installing
@@ -30,13 +32,13 @@ Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use
         <dependency>
             <groupId>com.github.expdev07</groupId>
             <artifactId>commy-spigot</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
         </dependency>
         <!-- Use this for any BungeeCord plugin -->
         <dependency>
             <groupId>com.github.expdev07</groupId>
             <artifactId>commy-bungee</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
         </dependency>
     </dependencies>
 </project>
@@ -76,12 +78,7 @@ public class SpigotPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         // Initialize commy, calling setup will start the engines
-        this.commy = new SpigotCommy(this).setup();
-
-        // Setup a default handler using lambda. Setting this is not obligatory
-        commy.setDefaultHandler((conn, tag, message) -> LOGGER.info(
-                String.format("[%s] Recieved an unknown message from %s: %s", tag, conn.getSender().getName(), message)
-        ));
+        this.commy = new SpigotCommy(this);
 
         // Adding handlers, you can add as many as you want
         // The first parameter here is the "pipe" the handler will handle messages for
@@ -90,11 +87,32 @@ public class SpigotPlugin extends JavaPlugin {
     }
 
     /**
+     * A method demonstrating some usage
+     */
+    private void sendMessage() {
+        // Get a connection with a player
+        Connection<Player> connection = commy.getConnection(Bukkit.getPlayer("ExpDev"));
+        
+        // Now, there are many ways you can send a message
+        //   * You can just send a simple string
+        connection.sendMessage("test_proxy", "This is a message");
+        //   * You can send a custom object!
+        connection.sendMessage("test_proxy", new Object());
+        //   * You can send bytes like you normally would
+        ByteArrayDataOutput input = ByteStreams.newDataOutput();
+        input.writeUTF("A string"); input.writeBoolean(true); input.writeInt(3);
+        connection.sendMessage("test_proxy", input.toByteArray());
+        
+        // You can also "quick send" a message
+        commy.sendMessage("test_proxy", "Message to send");
+    }
+
+    /**
      * Handles a test message. The parameter of MessageHandler is the type
      * of source we will communicate with, which for Spigot's case is
      * always Player
      */
-    private static class TestHandler implements MessageHandler<Player> {
+    private static class TestHandler extends StringMessageHandler<Player> {
 
         @Override
         public void handle(Connection<Player> conn, String tag, String message) {
@@ -127,7 +145,7 @@ public class SpigotPlugin extends JavaPlugin {
             // which means this will have to manually be specified
             return TestObject.class;
         }
-        
+
     }
 
 }
@@ -152,7 +170,7 @@ public class BungeePlugin extends Plugin {
     public void onEnable() {
         // Initialize commy, calling setup will
         // start the engines
-        this.commy = new BungeeCommy(this).setup();
+        this.commy = new BungeeCommy(this);
 
         // Adding handlers, you can add as many as you want
         commy.addHandler("test", new TestHandler());
@@ -164,12 +182,22 @@ public class BungeePlugin extends Plugin {
     private static class TestHandler implements MessageHandler<ServerInfo> {
 
         @Override
-        public void handle(Connection<ServerInfo> conn, String tag, String message) {
+        public void handle(Connection<ServerInfo> conn, String tag, byte[] message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
+            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + new String(message));
+
+            // If you send a normal, simple string; then you can read it like
+            // Optionally, you can extend "StringMessageHandler<ServerInfo>" and this would be
+            // done for you
+            String recieved = new String(message);
+            
+            // Or... if you sent bytes, you can manipulate it like you normally would
+            ByteArrayDataInput in = ByteStreams.newDataInput(message);
+            LOGGER.info(in.readUTF());
+            LOGGER.info(in.readUTF());
 
             // Let's respond by sending them a TestObject
-            conn.sendMessage(new TestObject("ExpDev", 2));
+            conn.sendMessage("test_msg", new TestObject("ExpDev", 2));
         }
     }
 
