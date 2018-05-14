@@ -76,6 +76,7 @@ public class BungeeCommy extends Commy<ServerInfo> {
             // Prevent message leaks to player
             event.setCancelled(true);
         }
+
     }
 
 }

@@ -1,11 +1,10 @@
 package com.github.expdev07.commy.spigotplugin;
 
+import com.github.expdev07.commy.core.BytesOutput;
 import com.github.expdev07.commy.core.Connection;
 import com.github.expdev07.commy.core.handler.AbstractMessageHandler;
 import com.github.expdev07.commy.core.handler.StringMessageHandler;
 import com.github.expdev07.commy.spigot.SpigotCommy;
-import com.google.common.io.ByteArrayDataOutput;
-import com.google.common.io.ByteStreams;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -47,11 +46,9 @@ public class SpigotPlugin extends JavaPlugin {
         //   * You can send a custom object!
         connection.sendMessage("test_proxy", new Object());
         //   * You can send bytes like you normally would
-        ByteArrayDataOutput input = ByteStreams.newDataOutput();
-        input.writeUTF("A string");
-        input.writeBoolean(true);
-        input.writeInt(3);
-        connection.sendMessage("test_proxy", input.toByteArray());
+        //     Use our helper class "BytesOutput" to quickly write to an array
+        byte[] bytes = new BytesOutput().write("a string").write("another string").getBytes();
+        connection.sendMessage("test_proxy", bytes);
 
         // You can also "quick send" a message
         commy.sendMessage("test_proxy", "Message to send");
