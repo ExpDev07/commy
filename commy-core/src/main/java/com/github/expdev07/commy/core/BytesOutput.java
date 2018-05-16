@@ -12,7 +12,7 @@ public class BytesOutput {
     public BytesOutput() {
         this.out = ByteStreams.newDataOutput();
     }
-    
+
     public BytesOutput write(String... utf) {
         Arrays.stream(utf).forEach(out::writeUTF);
         return this;
