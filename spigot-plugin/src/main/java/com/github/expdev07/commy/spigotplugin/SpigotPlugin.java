@@ -76,7 +76,7 @@ public class SpigotPlugin extends JavaPlugin {
      * A simple handler to test out how to use the abstract handler to
      * send objects over the pipes
      */
-    private static class AbstractTestHandler extends AbstractMessageHandler<Player, TestObject> {
+    private static class AbstractTestHandler implements AbstractMessageHandler<Player, TestObject> {
 
         @Override
         public void handle(Connection<Player> conn, String tag, TestObject message) {
