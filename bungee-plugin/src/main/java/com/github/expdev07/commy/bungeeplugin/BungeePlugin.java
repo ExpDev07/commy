@@ -9,6 +9,7 @@ import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.plugin.Plugin;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -17,13 +18,15 @@ import java.util.logging.Logger;
 public class BungeePlugin extends Plugin {
 
     // Universal logger
-    public static final Logger LOGGER = ProxyServer.getInstance().getLogger();
+    private static Logger logger;
 
     // Pre-"defining" a commy at class-level
     private BungeeCommy commy;
 
     @Override
     public void onEnable() {
+        logger = ProxyServer.getInstance().getLogger();
+
         // Initialize commy, calling setup will
         // start the engines
         this.commy = new BungeeCommy(this);
@@ -40,17 +43,13 @@ public class BungeePlugin extends Plugin {
         @Override
         public void handle(Connection<ServerInfo> conn, String tag, byte[] message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + new String(message));
-
-            // If you send a normal, simple string; then you can read it like
-            // Optionally, you can extend "StringMessageHandler<ServerInfo>" and this would be
-            // done for you
-            String recieved = new String(message);
+            logger.log(Level.INFO, ("received a message through test from " + conn.getSender().getName() + ": " + new String(message)));
 
             // Or... if you sent bytes, you can manipulate it like you normally would
             ByteArrayDataInput in = ByteStreams.newDataInput(message);
-            LOGGER.info(in.readUTF());
-            LOGGER.info(in.readUTF());
+
+            logger.log(Level.INFO, in.readUTF());
+            logger.log(Level.INFO, in.readUTF());
 
             // Let's respond by sending them a TestObject
             conn.sendMessage("test_msg", new TestObject("ExpDev", 2));
