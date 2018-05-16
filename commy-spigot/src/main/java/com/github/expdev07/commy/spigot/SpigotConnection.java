@@ -1,5 +1,6 @@
 package com.github.expdev07.commy.spigot;
 
+import com.github.expdev07.commy.core.BytesOutput;
 import com.github.expdev07.commy.core.Connection;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
@@ -29,11 +30,11 @@ public class SpigotConnection implements Connection<Player> {
             return;
         }
 
-        // Send message
-        ByteArrayDataOutput out = ByteStreams.newDataOutput();
-        out.writeUTF(proxy);
-        out.writeUTF(new String(message));
-        player.sendPluginMessage(plugin, channel, out.toByteArray());
+        byte[] bytes = new BytesOutput()
+                .write(proxy, new String(message))
+                .getBytes();
+
+        player.sendPluginMessage(plugin, channel, bytes);
     }
 
     @Override
