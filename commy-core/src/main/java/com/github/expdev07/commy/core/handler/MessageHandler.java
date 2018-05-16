@@ -14,7 +14,7 @@ public interface MessageHandler<T> {
      *
      * @param conn    Connection for message
      * @param proxy   Proxy to route message to
-     * @param message Message recieved
+     * @param message Message received
      */
     void handle(Connection<T> conn, String proxy, byte[] message);
 

@@ -117,7 +117,7 @@ public class SpigotPlugin extends JavaPlugin {
         @Override
         public void handle(Connection<Player> conn, String tag, String message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
+            LOGGER.info("received a message through test from " + conn.getSender().getName() + ": " + message);
 
             // Respond! Here, the source we're communicating with will need to have a handler for the "test"
             // pipe, otherwise it will be rerouted to their default handler
@@ -133,9 +133,9 @@ public class SpigotPlugin extends JavaPlugin {
 
         @Override
         public void handle(Connection<Player> conn, String tag, TestObject message) {
-            // We recieved a "TestObject" object, manipulate it as you want
+            // We received a "TestObject" object, manipulate it as you want
             LOGGER.info(String.format(
-                    "Recieved a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
+                    "received a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
             );
         }
 
@@ -153,7 +153,7 @@ public class SpigotPlugin extends JavaPlugin {
 
 ### BungeeCord
 
-Setting up _Commy_ in a BungeeCord plugin, then sending a custom object/message once a test message is recieved.
+Setting up _Commy_ in a BungeeCord plugin, then sending a custom object/message once a test message is received.
 ````java
 /**
  * A simple Bungee plugin demonstrating the use of Commy
@@ -184,12 +184,12 @@ public class BungeePlugin extends Plugin {
         @Override
         public void handle(Connection<ServerInfo> conn, String tag, byte[] message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + new String(message));
+            LOGGER.info("received a message through test from " + conn.getSender().getName() + ": " + new String(message));
 
             // If you send a normal, simple string; then you can read it like
             // Optionally, you can extend "StringMessageHandler<ServerInfo>" and this would be
             // done for you
-            String recieved = new String(message);
+            String received = new String(message);
             
             // Or... if you sent bytes, you can manipulate it like you normally would
             ByteArrayDataInput in = ByteStreams.newDataInput(message);

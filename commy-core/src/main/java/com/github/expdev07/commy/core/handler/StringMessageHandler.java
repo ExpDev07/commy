@@ -18,7 +18,7 @@ public abstract class StringMessageHandler<T> implements MessageHandler<T> {
      *
      * @param conn    Connection for message
      * @param proxy   Proxy to route message to
-     * @param message Message recieved
+     * @param message Message received
      */
     public abstract void handle(Connection<T> conn, String proxy, String message);
 
