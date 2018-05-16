@@ -12,11 +12,11 @@ import com.google.gson.Gson;
 public interface AbstractMessageHandler<T, M> extends MessageHandler<T> {
 
     // No need to make more than one GSON instance
-    Gson GSON = new Gson();
+    Gson gson = new Gson();
 
     @Override
     default void handle(Connection<T> sender, String proxy, byte[] message) {
-        this.handle(sender, proxy, GSON.fromJson(new String(message), this.getMessageType()));
+        this.handle(sender, proxy, gson.fromJson(new String(message), this.getMessageType()));
     }
 
     /**

@@ -17,13 +17,15 @@ import java.util.logging.Logger;
 public class SpigotPlugin extends JavaPlugin {
 
     // Universal logger
-    public static final Logger LOGGER = Bukkit.getLogger();
+    public static Logger logger;
 
     // Pre-"defining" a commy at class-level
     private SpigotCommy commy;
 
     @Override
     public void onEnable() {
+        logger = Bukkit.getLogger();
+
         // Initialize commy, calling setup will start the engines
         this.commy = new SpigotCommy(this);
 
@@ -64,7 +66,7 @@ public class SpigotPlugin extends JavaPlugin {
         @Override
         public void handle(Connection<Player> conn, String tag, String message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
+            logger.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
 
             // Respond! Here, the source we're communicating with will need to have a handler for the "test"
             // pipe, otherwise it will be rerouted to their default handler
@@ -81,7 +83,7 @@ public class SpigotPlugin extends JavaPlugin {
         @Override
         public void handle(Connection<Player> conn, String tag, TestObject message) {
             // We recieved a "TestObject" object, manipulate it as you want
-            LOGGER.info(String.format(
+            logger.info(String.format(
                     "Recieved a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
             );
         }
