@@ -2,8 +2,6 @@ package com.github.expdev07.commy.spigot;
 
 import com.github.expdev07.commy.core.BytesOutput;
 import com.github.expdev07.commy.core.Connection;
-import com.google.common.io.ByteArrayDataOutput;
-import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -30,10 +28,7 @@ public class SpigotConnection implements Connection<Player> {
             return;
         }
 
-        byte[] bytes = new BytesOutput()
-                .write(proxy, new String(message))
-                .getBytes();
-
+        byte[] bytes = new BytesOutput().write(proxy, new String(message)).getBytes();
         player.sendPluginMessage(plugin, channel, bytes);
     }
 

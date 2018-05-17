@@ -45,9 +45,9 @@ public class SpigotPlugin extends JavaPlugin {
 
         // Now, there are many ways you can send a message
         //   * You can just send a simple string
-        connection.sendMessage("test_proxy", "This is a message");
+        connection.sendMessage("test", "This is a message");
         //   * You can send a custom object!
-        connection.sendMessage("test_proxy", new Object());
+        connection.sendMessage("test", new Object());
         //   * You can send bytes like you normally would
         //     Use our helper class "BytesOutput" to quickly write to an array
         byte[] bytes = new BytesOutput()

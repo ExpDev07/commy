@@ -2,8 +2,6 @@ package com.github.expdev07.commy.bungee;
 
 import com.github.expdev07.commy.core.BytesOutput;
 import com.github.expdev07.commy.core.Connection;
-import com.google.common.io.ByteArrayDataOutput;
-import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
 import net.md_5.bungee.api.config.ServerInfo;
 
@@ -22,10 +20,7 @@ public class BungeeConnection implements Connection<ServerInfo> {
 
     @Override
     public void sendMessage(String proxy, byte[] message) {
-        byte[] out = new BytesOutput()
-                .write(proxy, new String(message))
-                .getBytes();
-
+        byte[] out = new BytesOutput().write(proxy, new String(message)).getBytes();
         server.sendData(channel, out);
     }
 
