@@ -1,13 +1,12 @@
 package com.github.expdev07.commy.spigot;
 
+import com.github.expdev07.commy.core.Commy;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- * Copyright (c) 2013-2018 Tyler Grissom
- */
 public class SpigotCommyFactory {
 
-    public static SpigotCommy createCommy(JavaPlugin plugin) {
+    public static Commy<Player> createCommy(JavaPlugin plugin) {
         SpigotCommy commy = new SpigotCommy(plugin);
 
         commy.setup();

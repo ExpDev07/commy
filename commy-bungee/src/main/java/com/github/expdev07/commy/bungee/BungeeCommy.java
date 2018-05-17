@@ -18,9 +18,8 @@ public class BungeeCommy extends Commy<ServerInfo> {
 
     private Plugin plugin;
 
-    public BungeeCommy(Plugin plugin) {
+    protected BungeeCommy(Plugin plugin) {
         this.plugin = plugin;
-        setup();
     }
 
     @Override
@@ -56,7 +55,7 @@ public class BungeeCommy extends Commy<ServerInfo> {
         private Plugin plugin;
         private BungeeCommy commy;
 
-        public MessageListener(Plugin plugin, BungeeCommy commy) {
+        MessageListener(Plugin plugin, BungeeCommy commy) {
             this.plugin = plugin;
             this.commy = commy;
         }
