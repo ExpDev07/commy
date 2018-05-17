@@ -32,13 +32,13 @@ Add commy to your pom.xml file. **Note:** If you are making a Spigot plugin, use
         <dependency>
             <groupId>com.github.expdev07</groupId>
             <artifactId>commy-spigot</artifactId>
-            <version>1.3</version>
+            <version>1.4</version>
         </dependency>
         <!-- Use this for any BungeeCord plugin -->
         <dependency>
             <groupId>com.github.expdev07</groupId>
             <artifactId>commy-bungee</artifactId>
-            <version>1.3</version>
+            <version>1.4</version>
         </dependency>
     </dependencies>
 </project>
@@ -70,13 +70,15 @@ Setting up _Commy_ and assigning a default handler, a handler for intercepting a
 public class SpigotPlugin extends JavaPlugin {
 
     // Universal logger
-    public static final Logger LOGGER = Bukkit.getLogger();
+    static Logger logger;
 
     // Pre-"defining" a commy at class-level
     private SpigotCommy commy;
 
     @Override
     public void onEnable() {
+        logger = Bukkit.getLogger();
+
         // Initialize commy, calling setup will start the engines
         this.commy = new SpigotCommy(this);
 
@@ -92,17 +94,19 @@ public class SpigotPlugin extends JavaPlugin {
     private void sendMessage() {
         // Get a connection with a player
         Connection<Player> connection = commy.getConnection(Bukkit.getPlayer("ExpDev"));
-        
+
         // Now, there are many ways you can send a message
         //   * You can just send a simple string
-        connection.sendMessage("test_proxy", "This is a message");
+        connection.sendMessage("test", "This is a message");
         //   * You can send a custom object!
-        connection.sendMessage("test_proxy", new Object());
+        connection.sendMessage("test", new Object());
         //   * You can send bytes like you normally would
-        ByteArrayDataOutput input = ByteStreams.newDataOutput();
-        input.writeUTF("A string"); input.writeBoolean(true); input.writeInt(3);
-        connection.sendMessage("test_proxy", input.toByteArray());
-        
+        //     Use our helper class "BytesOutput" to quickly write to an array
+        byte[] bytes = new BytesOutput()
+                .write("a string", "another string")
+                .getBytes();
+        connection.sendMessage("test_proxy", bytes);
+
         // You can also "quick send" a message
         commy.sendMessage("test_proxy", "Message to send");
     }
@@ -117,7 +121,7 @@ public class SpigotPlugin extends JavaPlugin {
         @Override
         public void handle(Connection<Player> conn, String tag, String message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("received a message through test from " + conn.getSender().getName() + ": " + message);
+            logger.log(Level.INFO, "Received a message through test from " + conn.getSender().getName() + ": " + message);
 
             // Respond! Here, the source we're communicating with will need to have a handler for the "test"
             // pipe, otherwise it will be rerouted to their default handler
@@ -129,13 +133,13 @@ public class SpigotPlugin extends JavaPlugin {
      * A simple handler to test out how to use the abstract handler to
      * send objects over the pipes
      */
-    private static class AbstractTestHandler extends AbstractMessageHandler<Player, TestObject> {
+    private static class AbstractTestHandler implements AbstractMessageHandler<Player, TestObject> {
 
         @Override
         public void handle(Connection<Player> conn, String tag, TestObject message) {
             // We received a "TestObject" object, manipulate it as you want
-            LOGGER.info(String.format(
-                    "received a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
+            logger.log(Level.INFO, String.format(
+                    "Received a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
             );
         }
 
@@ -161,13 +165,15 @@ Setting up _Commy_ in a BungeeCord plugin, then sending a custom object/message 
 public class BungeePlugin extends Plugin {
 
     // Universal logger
-    public static final Logger LOGGER = ProxyServer.getInstance().getLogger();
+    private static Logger logger;
 
     // Pre-"defining" a commy at class-level
     private BungeeCommy commy;
 
     @Override
     public void onEnable() {
+        logger = ProxyServer.getInstance().getLogger();
+
         // Initialize commy, calling setup will
         // start the engines
         this.commy = new BungeeCommy(this);
@@ -184,17 +190,12 @@ public class BungeePlugin extends Plugin {
         @Override
         public void handle(Connection<ServerInfo> conn, String tag, byte[] message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("received a message through test from " + conn.getSender().getName() + ": " + new String(message));
+            logger.log(Level.INFO, ("Received a message through test from " + conn.getSender().getName() + ": " + new String(message)));
 
-            // If you send a normal, simple string; then you can read it like
-            // Optionally, you can extend "StringMessageHandler<ServerInfo>" and this would be
-            // done for you
-            String received = new String(message);
-            
             // Or... if you sent bytes, you can manipulate it like you normally would
             ByteArrayDataInput in = ByteStreams.newDataInput(message);
-            LOGGER.info(in.readUTF());
-            LOGGER.info(in.readUTF());
+            logger.log(Level.INFO, in.readUTF());
+            logger.log(Level.INFO, in.readUTF());
 
             // Let's respond by sending them a TestObject
             conn.sendMessage("test_msg", new TestObject("ExpDev", 2));
@@ -222,6 +223,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 ## Authors
 
 * **Marius Richardsen** - *Initial work* - [ExpDev](https://github.com/ExpDev07)
+* **Tyler Grissom** - *Contributor* - [grisstyl](https://github.com/grisstyl)
 
 See also the list of [contributors](https://github.com/ExpDev07/Commy/contributors) who participated in this project.
 

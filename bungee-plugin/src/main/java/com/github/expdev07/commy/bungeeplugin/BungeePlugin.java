@@ -43,11 +43,10 @@ public class BungeePlugin extends Plugin {
         @Override
         public void handle(Connection<ServerInfo> conn, String tag, byte[] message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            logger.log(Level.INFO, ("received a message through test from " + conn.getSender().getName() + ": " + new String(message)));
+            logger.log(Level.INFO, ("Received a message through test from " + conn.getSender().getName() + ": " + new String(message)));
 
             // Or... if you sent bytes, you can manipulate it like you normally would
             ByteArrayDataInput in = ByteStreams.newDataInput(message);
-
             logger.log(Level.INFO, in.readUTF());
             logger.log(Level.INFO, in.readUTF());
 
