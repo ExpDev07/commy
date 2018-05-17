@@ -12,12 +12,14 @@ import java.util.Map;
  */
 public abstract class Commy<T> {
 
-    // Global channel id, doesn't have to be used by each implementation,
-    // but is preferred
+    /**
+     * Global channel id, doesn't have to be used by each implementation,
+     * but is preferred
+     */
     public static final String CHANNEL_ID = "Commy";
 
     private MessageHandler<T> defaultHandler = null;
-    private Map<String, MessageHandler<T>> handlers = new HashMap<String, MessageHandler<T>>();
+    private Map<String, MessageHandler<T>> handlers = new HashMap<>();
 
     /**
      * Constructs a commy

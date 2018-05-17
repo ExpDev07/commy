@@ -9,6 +9,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -17,13 +18,15 @@ import java.util.logging.Logger;
 public class SpigotPlugin extends JavaPlugin {
 
     // Universal logger
-    public static final Logger LOGGER = Bukkit.getLogger();
+    static Logger logger;
 
     // Pre-"defining" a commy at class-level
     private SpigotCommy commy;
 
     @Override
     public void onEnable() {
+        logger = Bukkit.getLogger();
+
         // Initialize commy, calling setup will start the engines
         this.commy = new SpigotCommy(this);
 
@@ -47,7 +50,9 @@ public class SpigotPlugin extends JavaPlugin {
         connection.sendMessage("test_proxy", new Object());
         //   * You can send bytes like you normally would
         //     Use our helper class "BytesOutput" to quickly write to an array
-        byte[] bytes = new BytesOutput().write("a string").write("another string").getBytes();
+        byte[] bytes = new BytesOutput()
+                .write("a string", "another string")
+                .getBytes();
         connection.sendMessage("test_proxy", bytes);
 
         // You can also "quick send" a message
@@ -64,7 +69,7 @@ public class SpigotPlugin extends JavaPlugin {
         @Override
         public void handle(Connection<Player> conn, String tag, String message) {
             // We know tag == test, otherwise it would have been intercepted through the default handler
-            LOGGER.info("Recieved a message through test from " + conn.getSender().getName() + ": " + message);
+            logger.log(Level.INFO, "Received a message through test from " + conn.getSender().getName() + ": " + message);
 
             // Respond! Here, the source we're communicating with will need to have a handler for the "test"
             // pipe, otherwise it will be rerouted to their default handler
@@ -76,13 +81,13 @@ public class SpigotPlugin extends JavaPlugin {
      * A simple handler to test out how to use the abstract handler to
      * send objects over the pipes
      */
-    private static class AbstractTestHandler extends AbstractMessageHandler<Player, TestObject> {
+    private static class AbstractTestHandler implements AbstractMessageHandler<Player, TestObject> {
 
         @Override
         public void handle(Connection<Player> conn, String tag, TestObject message) {
-            // We recieved a "TestObject" object, manipulate it as you want
-            LOGGER.info(String.format(
-                    "Recieved a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
+            // We received a "TestObject" object, manipulate it as you want
+            logger.log(Level.INFO, String.format(
+                    "Received a %s through %s from %s", message.getClass().getSimpleName(), tag, conn.getSender().getName())
             );
         }
 
