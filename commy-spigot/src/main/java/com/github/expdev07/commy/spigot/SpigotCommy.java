@@ -17,9 +17,8 @@ public class SpigotCommy extends Commy<Player> {
 
     private JavaPlugin plugin;
 
-    public SpigotCommy(JavaPlugin plugin) {
+    protected SpigotCommy(JavaPlugin plugin) {
         this.plugin = plugin;
-        setup();
     }
 
     @Override
@@ -51,7 +50,7 @@ public class SpigotCommy extends Commy<Player> {
 
         private SpigotCommy commy;
 
-        public MessageListener(SpigotCommy commy) {
+        MessageListener(SpigotCommy commy) {
             this.commy = commy;
         }
 

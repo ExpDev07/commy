@@ -68,7 +68,7 @@ public abstract class Commy<T> {
     /**
      * Setup appropriate stuff
      */
-    public abstract void setup();
+    protected abstract void setup();
 
     /**
      * Gets a connection with the target

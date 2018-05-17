@@ -5,6 +5,7 @@ import com.github.expdev07.commy.core.Connection;
 import com.github.expdev07.commy.core.handler.AbstractMessageHandler;
 import com.github.expdev07.commy.core.handler.StringMessageHandler;
 import com.github.expdev07.commy.spigot.SpigotCommy;
+import com.github.expdev07.commy.spigot.SpigotCommyFactory;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -27,8 +28,8 @@ public class SpigotPlugin extends JavaPlugin {
     public void onEnable() {
         logger = Bukkit.getLogger();
 
-        // Initialize commy, calling setup will start the engines
-        this.commy = new SpigotCommy(this);
+        // Initialize commy, will self setup
+        this.commy = SpigotCommyFactory.createCommy(this);
 
         // Adding handlers, you can add as many as you want
         // The first parameter here is the "pipe" the handler will handle messages for
