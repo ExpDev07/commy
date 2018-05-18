@@ -65,7 +65,7 @@ public class SpigotPlugin extends JavaPlugin {
      * of source we will communicate with, which for Spigot's case is
      * always Player
      */
-    private static class TestHandler extends StringMessageHandler<Player> {
+    private static class TestHandler implements StringMessageHandler<Player> {
 
         @Override
         public void handle(Connection<Player> conn, String tag, String message) {
@@ -76,6 +76,7 @@ public class SpigotPlugin extends JavaPlugin {
             // pipe, otherwise it will be rerouted to their default handler
             conn.sendMessage("test", "I heard your test message and is sending this back through the \"test\" pipe");
         }
+
     }
 
     /**

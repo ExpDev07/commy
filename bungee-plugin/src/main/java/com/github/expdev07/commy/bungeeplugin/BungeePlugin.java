@@ -1,6 +1,7 @@
 package com.github.expdev07.commy.bungeeplugin;
 
 import com.github.expdev07.commy.bungee.BungeeCommy;
+import com.github.expdev07.commy.bungee.BungeeCommyFactory;
 import com.github.expdev07.commy.core.Connection;
 import com.github.expdev07.commy.core.handler.MessageHandler;
 import com.google.common.io.ByteArrayDataInput;
@@ -29,7 +30,7 @@ public class BungeePlugin extends Plugin {
 
         // Initialize commy, calling setup will
         // start the engines
-        this.commy = new BungeeCommy(this);
+        this.commy = BungeeCommyFactory.createCommy(this);
 
         // Adding handlers, you can add as many as you want
         commy.addHandler("test", new TestHandler());

@@ -3,12 +3,12 @@ package com.github.expdev07.commy.core.handler;
 import com.github.expdev07.commy.core.Connection;
 
 /**
- *
+ * Handles an incoming string
  */
-public abstract class StringMessageHandler<T> implements MessageHandler<T> {
+public interface StringMessageHandler<T> extends MessageHandler<T> {
 
     @Override
-    public void handle(Connection<T> conn, String proxy, byte[] message) {
+    default void handle(Connection<T> conn, String proxy, byte[] message) {
         // Just transfer bytes to string
         this.handle(conn, proxy, new String(message));
     }
@@ -20,6 +20,6 @@ public abstract class StringMessageHandler<T> implements MessageHandler<T> {
      * @param proxy   Proxy to route message to
      * @param message Message received
      */
-    public abstract void handle(Connection<T> conn, String proxy, String message);
+    void handle(Connection<T> conn, String proxy, String message);
 
 }
