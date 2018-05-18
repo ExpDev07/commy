@@ -9,14 +9,14 @@ import com.google.gson.Gson;
  * @param <T> Type of source we will communicate with
  * @param <M> Type of message to send
  */
-public interface AbstractMessageHandler<T, M> extends MessageHandler<T> {
+public interface AbstractMessageHandler<T, M> extends StringMessageHandler<T> {
 
     // No need to make more than one GSON instance
     Gson gson = new Gson();
 
     @Override
-    default void handle(Connection<T> sender, String proxy, byte[] message) {
-        this.handle(sender, proxy, gson.fromJson(new String(message), this.getMessageType()));
+    default void handle(Connection<T> sender, String proxy, String message) {
+        this.handle(sender, proxy, gson.fromJson(message, this.getMessageType()));
     }
 
     /**
